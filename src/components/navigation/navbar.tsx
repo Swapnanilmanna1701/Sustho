@@ -16,7 +16,7 @@ import { LucideIcon, ZapIcon } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useState } from 'react';
 import MaxWidthWrapper from "../global/max-width-wrapper";
-import { ModeToggle } from "@/components/theme-toggle";
+//import { ModeToggle } from "@/components/theme-toggle";
 
 import MobileNavbar from "./mobile-navbar";
 import AnimationContainer from "../global/animation-container";
@@ -52,10 +52,10 @@ const Navbar = () => {
                     <div className="flex items-center space-x-12">
                         <Link href="/#home">
                             <span className="text-lg font-bold font-heading !leading-none">
-                                Linkify
+                                Sustho
                             </span>
                         </Link>
-                        <ModeToggle />
+                        
 
                         <NavigationMenu className="hidden lg:flex">
                             <NavigationMenuList>
