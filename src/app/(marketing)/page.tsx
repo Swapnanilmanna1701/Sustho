@@ -13,6 +13,8 @@ import { currentUser } from "@clerk/nextjs/server";
 import { ArrowRightIcon, CreditCardIcon, StarIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Spotlight } from "@/components/ui/spotlight";
+
 
 const HomePage = async () => {
 
@@ -20,9 +22,14 @@ const HomePage = async () => {
 
     return (
         <div className="overflow-x-hidden scrollbar-hide size-full">
+            <Spotlight
+                        className="-top-40 left-0 md:left-60 md:-top-20"
+                        fill="rgba(255, 255, 255, 0.5)"
+                    />
             {/* Hero Section */}
             <MaxWidthWrapper>
                 <div className="flex flex-col items-center justify-center w-full text-center bg-gradient-to-t from-background">
+                
                     <AnimationContainer className="flex flex-col items-center justify-center w-full text-center">
                         <button className="group relative grid overflow-hidden rounded-full px-4 py-1 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200">
                             <span>
