@@ -67,16 +67,8 @@ export default function Home() {
             </h1>
           </div>
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon" asChild>
-              <a
-                href="https://github.com/subhadeeproy3902/dictionary-mvp"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-            </Button>
-            <ThemeToggle />
+            
+            
           </div>
         </motion.header>
 
