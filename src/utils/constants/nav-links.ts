@@ -35,6 +35,13 @@ export const NAV_LINKS = [
                 href: "/features/ai-translator",
                 icon: QrCodeIcon,
             }
+            ,
+            {
+                title: "AI Dictionary",
+                tagline: "Use QR codes to reach your audience.",
+                href: "/features/dictionary",
+                icon: QrCodeIcon,
+            }
         ],
     },
     {
