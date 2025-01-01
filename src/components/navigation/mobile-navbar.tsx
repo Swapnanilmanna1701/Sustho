@@ -23,6 +23,8 @@ const MobileNavbar = () => {
 
     const { isSignedIn, signOut } = useAuth();
 
+    
+
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     const handleClose = () => {
