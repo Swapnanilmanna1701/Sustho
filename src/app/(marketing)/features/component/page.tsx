@@ -5,7 +5,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 import Image from "next/image";
 import { Icons } from "@/components/icon";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/buttonsp";
 import { Card, CardTitle } from "@/components/ui/card";
 import CardCollection from "@/components/ui/cards";
 

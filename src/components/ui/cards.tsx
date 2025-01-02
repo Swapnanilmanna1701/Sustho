@@ -1,7 +1,7 @@
 "use client"
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
-import Copy from "../copy";
+import Copy from "@/components/copy";
 import {
   Card,
   CardContent,
