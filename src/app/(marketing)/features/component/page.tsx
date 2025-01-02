@@ -1,13 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import { Cover } from "@/components/ui/cover";
-import { Spotlight } from "@/components/ui/Spootlight";
+import { Spotlight } from "@/components/ui/spotlight";
 import Image from "next/image";
 import { Icons } from "@/components/icon";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardTitle } from "@/components/ui/card";
-import CardCollection from "@/components/spectrumui/cards";
+import CardCollection from "@/components/ui/cards";
 
 import Requestcomponents from "@/components/shinebutton";
 import { Axis3DIcon } from "lucide-react";
