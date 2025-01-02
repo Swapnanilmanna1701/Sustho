@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbarsp";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import Footer from "@/components/footer";
-//import "@/styles/spec.css";
+import "@/styles/spec.css";
 import { inject } from "@vercel/analytics";
 import { siteConfig } from "@/config/site";
 import { Analytics } from "@vercel/analytics/react";
