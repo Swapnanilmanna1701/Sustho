@@ -1,7 +1,7 @@
 import React from 'react';
 import PreviewCodeCard from '@/app/(docs)/docs/components/preview-code-card';
 import { H3 } from '@/components/ui/heading-with-anchor';
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/functions/cn';
 
 interface UsageProps {
   className?: string;

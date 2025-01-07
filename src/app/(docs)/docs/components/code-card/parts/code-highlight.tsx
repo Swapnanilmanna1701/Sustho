@@ -6,7 +6,7 @@ import "highlight.js/styles/github-dark.css";
 
 import { Button } from "@/components/ui/button";
 import { Copy, Check } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/functions/cn";
 
 interface CodeHighlightProps {
   code?: string;

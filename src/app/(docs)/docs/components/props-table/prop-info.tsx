@@ -1,7 +1,7 @@
 import React from 'react';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Info } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/functions/cn';
 
 interface PropInfoProps {
   children?: React.ReactNode;

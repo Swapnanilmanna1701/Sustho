@@ -2,7 +2,7 @@
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CodeHighlight from "@/app/(docs)/docs/components/code-card/parts/code-highlight";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/functions/cn";
 
 interface CodeCardProps {
   children?: React.ReactNode;
