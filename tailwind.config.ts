@@ -85,6 +85,8 @@ const config = {
       fontFamily: {
         "heading": ["var(--font-aeonik)"],
         "default": ["var(--font-inter)"],
+        sans: ['var(--font-geist-sans)'],
+				mono: ['var(--font-geist-mono)'],
       },
       keyframes: {
         "accordion-down": {

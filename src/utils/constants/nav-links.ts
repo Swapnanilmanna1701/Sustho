@@ -56,6 +56,13 @@ export const NAV_LINKS = [
                 href: "/features/design",
                 icon: QrCodeIcon,
             }
+            ,
+            {
+                title: "Typer",
+                tagline: "Use QR codes to reach your audience.",
+                href: "/features/typer",
+                icon: QrCodeIcon,
+            }
         ],
     },
     {

@@ -1,7 +1,7 @@
 import { PuzzlesList } from "@/components/ui/puzzle-list";
-import { Hero } from "@/components/ui/herod";
-import { Demo } from "@/components/ui/index";
-import { Features } from "@/components/ui/features";
+import { Hero } from "@/app/_components/hero";
+import { Demo } from "@/app/_components/demo";
+import { Features } from "@/app/_components/features";
 
 export default async function Home() {
   return (
