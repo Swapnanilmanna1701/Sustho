@@ -160,7 +160,7 @@ export default function TypingTest() {
             <DialogContent>
               <DialogHeader>
                 <DialogTitle>Typing Test Results</DialogTitle>
-                <DialogDescription>Here's how you performed:</DialogDescription>
+                <DialogDescription>Here is how you performed:</DialogDescription>
               </DialogHeader>
               <div className="py-4">
                 <p className="text-xl mb-2">

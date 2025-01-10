@@ -1,101 +1,30 @@
-import mongoose, { Model } from 'mongoose';
+import mongoose from "mongoose";
 
-export interface IUser extends mongoose.Document {
-    fullname: string;
-    email: string;
-    password: string;
-    username: string;
-    testAttempted: number;
-    topSpeed: number;
-    avgSpeed: number;
-    accuracy : number;
-    achievement: string[];
-    bio : string;
-    profilePicUrl:string;
-    country : string;
-    lastActive : Date;
-    history : {
-        speed : number,
-        accuracy : number,
-        testPlayed : Date,
-    }[];
+export async function connectDb():Promise<void>{
+    try{
+        if (!process.env.MONGODB_URL) {
+            throw new Error("MONGO_URL is not defined in the environment variables");
+          }
 
+          await mongoose.connect(process.env.MONGODB_URL);
+
+
+          const connection = mongoose.connection;
+
+          connection.on("connected", () => {
+            console.log("Connected to MongoDB");
+          });
+
+          connection.on("error",(error:Error) => {
+            console.log("Error connecting to MongoDB");
+            console.error(error);
+            process.exit(1);
+            
+          })
+
+    }catch(error)
+    {
+        console.log('Something went wrong while connecting to DB');
+        console.error(error);
+    }
 }
-
-const userSchema = new mongoose.Schema<IUser>({
-    fullname: {
-        type: String,
-        required: true,
-        trim: true,
-        minlength: 3,
-        maxlength: 50,
-        lowercase: true,
-
-    },
-    email: {
-        type: String,
-        required: true,
-        unique: true,
-        lowercase: true,
-        trim: true,
-        email: true,
-
-    },
-    password: {
-        type: String,
-        required: true,
-        minlength: 5,
-        maxlength: 2000,
-
-    },
-    username: {
-        type: String,
-        required: true,
-        unique: true,
-        lowercase: true,
-        trim: true,
-        minlength: 3,
-        maxlength: 20,
-    },
-    bio:{
-        type: String,
-        default : '',
-    },
-    testAttempted:{
-        type:Number,
-        default : 0,
-    },
-    topSpeed:{
-        type:Number,
-        default : 0,
-    },
-    avgSpeed:{
-        type:Number,
-        default : 0,
-    },
-    achievement:{
-        type: [String],
-    },
-    profilePicUrl : {
-        type: String,
-        default : '',
-    },
-    lastActive: {
-        type: Date,
-        default: Date.now,
-    },
-    history: {
-    type : [{
-        speed: { type: Number, },
-        accuracy: { type: Number,  },
-        testPlayed: { type: Date, default: Date.now },
-    }],
-    default : [],
-    },
-    
-});
-
-
-const User: Model<IUser> = mongoose.models.User || mongoose.model<IUser>('User', userSchema);
-
-export default User;
