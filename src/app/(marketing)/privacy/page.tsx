@@ -3,7 +3,7 @@ import React from 'react';
 
 const Privacy = () => {
     return (
-        <MaxWidthWrapper className="max-w-3xl mx-auto px-8 mb-40">
+        <MaxWidthWrapper className="max-w-3xl mx-auto px-8 ">
             <AnimationContainer delay={0.1} className="w-full">
                 <h1 className="text-4xl md:text-6xl font-heading font-bold my-12 text-center w-full">
                     Privacy Policy
@@ -161,17 +161,6 @@ const Privacy = () => {
                 </h2>
                 <p className="mt-8 text-muted-foreground">
                     We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on our website and updating the &quot;Last updated&quot; date at the top of this page.
-                </p>
-
-                <h2 className="text-xl font-medium mt-12">
-                    Contact Us
-                </h2>
-                <p className="mt-8 text-muted-foreground">
-                    If you have any questions or concerns about this Privacy Policy, please contact us at support@linkify.io.
-                </p>
-
-                <p className="mt-8 font-medium">
-                    By using Linkify, you acknowledge that you have read, understood, and agree to the terms of this Privacy Policy.
                 </p>
             </AnimationContainer>
         </MaxWidthWrapper>
