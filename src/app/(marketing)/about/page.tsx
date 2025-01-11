@@ -1,9 +1,10 @@
 "use client"
 import React, { useEffect, useRef, useState } from "react";
+import InteractiveHoverButton from "@/components/buttonui";
 
 const Cta = () => {
   return (
-    <section className="relative overflow-hidden rounded-xl border py-20">
+    <section className="relative overflow-hidden  py-20">
       <Particles
         className="absolute inset-0 -z-20"
         quantity={200}
@@ -29,11 +30,9 @@ const Cta = () => {
         </p>
 
         <a href="/pricing">
-          <button className="group flex h-10 items-center justify-center rounded-md border border-violet-800 bg-gradient-to-b from-violet-400 via-violet-500 to-purple-600 px-4 text-neutral-50 shadow-[inset_0_1px_0px_0px_#fdba74] active:[box-shadow:none]">
-            <span className="block group-active:[transform:translate3d(0,1px,0)]">
-              Get started now
-            </span>
-          </button>
+        <div className="relative justify-center">
+      <InteractiveHoverButton />
+    </div>
         </a>
       </div>
     </section>
