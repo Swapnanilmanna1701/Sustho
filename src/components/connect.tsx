@@ -5,9 +5,9 @@ import { SectionBadge } from "@/components/ui/section-bade";
 
 const Connect = () => {
     return (
-        <div className="flex flex-col items-center justify-center py-8 md:py-12 w-full">
+        <div className="flex flex-col bg-black items-center justify-center py-8 md:py-12 w-full">
             <Container>
-                <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
+                <div className="flex flex-col items-center text-center max-w-2xl bg-black mx-auto">
                     <SectionBadge title="Connect Tools" />
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
                         Seamless Integration with your favorite tools
@@ -18,8 +18,8 @@ const Connect = () => {
                 </div>
             </Container>
             <Container>
-                <div className="w-full relative mt-12">
-                    <Images.connect className="w-full h-auto" />
+                <div className="w-full relative mt-12 bg-black">
+                    <Images.connect className="w-full bg-black h-auto" />
                     <Particles
                         className="absolute inset-0"
                         quantity={150}

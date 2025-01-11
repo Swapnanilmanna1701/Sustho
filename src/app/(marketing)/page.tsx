@@ -15,6 +15,9 @@ import Connect from "@/components/connect";
 import { ArrowRightIcon, CreditCardIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import gradientStyle from "@/styles/gradient.module.css";
+import { cn } from "@/utils/functions/cn";
+
 //import { Spotlight } from "@/components/ui/spotlight";
 
 
@@ -23,7 +26,7 @@ const HomePage = async () => {
     const user = await currentUser();
 
     return (
-        <div className="overflow-x-hidden scrollbar-hide size-full">
+        <div className="overflow-x-hidden bg-black scrollbar-hide size-full">
             
             <MaxWidthWrapper>
                 <div className="flex flex-col items-center justify-center w-full text-center bg-gradient-to-t from-background">
@@ -41,9 +44,14 @@ const HomePage = async () => {
                             </span>
                         </button>
                         <h1 className="text-foreground text-center py-6 text-5xl font-medium tracking-normal text-balance sm:text-6xl md:text-7xl lg:text-8xl !leading-[1.15] w-full font-heading">
-                            Smart Links with <span className="text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
-                                Precision
-                            </span>
+                            Smart Links with <span
+							className={cn(
+								"bg-gradient-to-tr from-zinc-100 via-zinc-200/50 to-zinc-200/90 text-transparent bg-clip-text animate-gradient",
+								gradientStyle.magicText,
+							)}
+						>
+							Precision
+						</span>
                         </h1>
                         <p className="mb-12 text-lg tracking-tight text-muted-foreground md:text-xl text-balance">
                             Effortlessly streamline your link management with Linkify.
