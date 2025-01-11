@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import gradientStyle from "@/styles/gradient.module.css";
+import { cn } from "@/utils/functions/cn";
 
 type Tab = {
   id: string;
@@ -137,9 +139,14 @@ const FAQ: React.FC = () => {
   return (
     <div className="mx-auto max-w-3xl text-gray-800 dark:text-gray-200 sm:p-6">
       <h1 className="mb-4 text-center text-3xl font-bold">
-        <span className="bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent">
-          Frequently{" "}
-        </span>{" "}
+      <span
+							className={cn(
+								"bg-gradient-to-tr from-zinc-100 via-zinc-200/50 to-zinc-200/90 text-transparent bg-clip-text animate-gradient",
+								gradientStyle.magicText,
+							)}
+						>
+							Frequently
+						</span>{" "}
         asked questions
       </h1>
       <p className="mb-12 text-center text-gray-600 dark:text-gray-400">

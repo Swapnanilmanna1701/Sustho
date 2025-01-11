@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const TermsPage = () => {
     return (
-        <MaxWidthWrapper className="max-w-3xl mx-auto px-8 mb-40">
+        <MaxWidthWrapper className="">
             <AnimationContainer delay={0.1} className="w-full">
                 <h1 className="text-4xl md:text-6xl font-heading font-bold my-12 text-center w-full">
                     Terms and Conditions
