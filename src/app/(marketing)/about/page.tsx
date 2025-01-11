@@ -1,10 +1,12 @@
 "use client"
 import React, { useEffect, useRef, useState } from "react";
 import InteractiveHoverButton from "@/components/buttonui";
+import GooeyShareDemo from "@/app/(marketing)/share/page"
 
 const Cta = () => {
   return (
-    <section className="relative overflow-hidden  py-20">
+    <div>
+        <section className="relative overflow-hidden  py-20">
       <Particles
         className="absolute inset-0 -z-20"
         quantity={200}
@@ -23,11 +25,7 @@ const Cta = () => {
           Build it with us
         </h1>
 
-        <p className="my-10 max-w-4xl bg-gradient-to-b from-[#434343] to-[#494949] bg-clip-text text-center text-base font-bold text-[#F4FFFA00] dark:from-[#fafafa] dark:to-[#b4b4b4] md:text-lg lg:text-xl xl:text-2xl">
-          We are a team of talented developers who can help you build your
-          website. We have experience in building websites for various clients
-          in different industries.
-        </p>
+        <GooeyShareDemo/>
 
         <a href="/us">
         <div className="relative justify-center">
@@ -35,7 +33,12 @@ const Cta = () => {
     </div>
         </a>
       </div>
+      
     </section>
+    
+    
+    </div>
+    
   );
 };
 
