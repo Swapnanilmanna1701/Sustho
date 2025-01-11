@@ -1,7 +1,8 @@
 "use client"
 import React, { useEffect, useRef, useState } from "react";
 import InteractiveHoverButton from "@/components/buttonui";
-import GooeyShareDemo from "@/app/(marketing)/share/page"
+import GooeyShareDemo from "@/app/(marketing)/share/page";
+import SparklesPreview from "@/app/(marketing)/logo/page";
 
 const Cta = () => {
   return (
@@ -32,6 +33,7 @@ const Cta = () => {
       <InteractiveHoverButton />
     </div>
         </a>
+        <SparklesPreview/>
       </div>
       
     </section>
