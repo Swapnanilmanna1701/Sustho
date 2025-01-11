@@ -13,7 +13,7 @@ const MarketingLayout = ({ children }: Props) => {
             <main className="mt-20 mx-auto bg-black w-full z-0 relative">
                 {children}
             </main>
-            <Footer />
+            
         </div>
     );
 };

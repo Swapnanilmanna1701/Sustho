@@ -17,6 +17,7 @@ import Image from "next/image";
 import Link from "next/link";
 import gradientStyle from "@/styles/gradient.module.css";
 import { cn } from "@/utils/functions/cn";
+import Footer from "@/components/navigation/footer"
 
 //import { Spotlight } from "@/components/ui/spotlight";
 
@@ -232,6 +233,7 @@ const HomePage = async () => {
                         </div>
                     </LampContainer>
                 </AnimationContainer>
+                <Footer/>
             </MaxWidthWrapper>
 
         </div>
