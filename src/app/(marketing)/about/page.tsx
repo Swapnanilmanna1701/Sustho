@@ -29,7 +29,7 @@ const Cta = () => {
           in different industries.
         </p>
 
-        <a href="/pricing">
+        <a href="/us">
         <div className="relative justify-center">
       <InteractiveHoverButton />
     </div>
