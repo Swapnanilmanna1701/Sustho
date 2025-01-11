@@ -68,6 +68,7 @@ const HomePage = async () => {
                             </Button>
                         </div>
                     </AnimationContainer>
+                     
 
                     <Connect />
                 </div>

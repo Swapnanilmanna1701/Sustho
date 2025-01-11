@@ -91,7 +91,7 @@ const FAQItem: React.FC<FAQItemProps> = ({
   onClick,
 }) => {
   return (
-    <div className="mb-4 border-b border-[#e4e4e7] pb-4 dark:border-[#27272a] ">
+    <div className="mb-4 text-white border-b border-[#e4e4e7] pb-4 dark:border-[#27272a] ">
       <button
         className="flex w-full items-center justify-between text-left"
         onClick={onClick}
@@ -101,7 +101,7 @@ const FAQItem: React.FC<FAQItemProps> = ({
           <motion.svg
             animate={{ rotate: isOpen ? 45 : 0 }}
             transition={{ duration: 0.2 }}
-            className="size-5 text-gray-500 dark:text-gray-400"
+            className="size-5 text-white dark:text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -149,7 +149,7 @@ const FAQ: React.FC = () => {
 						</span>{" "}
         asked questions
       </h1>
-      <p className="mb-12 text-center text-gray-600 dark:text-gray-400">
+      <p className="mb-12 text-center text-white dark:text-gray-400">
         Need help with something? Here are our most frequently asked questions.
       </p>
 
