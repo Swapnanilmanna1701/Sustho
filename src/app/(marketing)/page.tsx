@@ -16,7 +16,7 @@ import { currentUser } from "@clerk/nextjs/server";
 import Reviews from "@/components/reviews";
 //import Connect from "@/components/connect";
 import { ArrowRightIcon, CreditCardIcon } from "lucide-react";
-import Image from "next/image";
+//import Image from "next/image";
 import Link from "next/link";
 import gradientStyle from "@/styles/gradient.module.css";
 import { cn } from "@/utils/functions/cn";

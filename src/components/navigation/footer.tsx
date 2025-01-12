@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import { AnimationContainer, Icons } from "@/components"
-import { TextHoverEffect } from "@/components/ui/text-hover-effect"
+import { TextHoverEffect } from "@/components/ui/text-hover-effect";
+import AnimatedModalDemo from "@/app/(marketing)/socialmedia/page";
 
 const Footer = () => {
     return (
         <footer className="flex flex-col  relative items-center justify-center bg-black border-t border-border pt-16 pb-8 md:pb-0 px-6 lg:px-8 w-full max-w-6xl mx-auto lg:pt-32 bg-[radial-gradient(35%_128px_at_50%_0%,theme(backgroundColor.white/8%),transparent)]">
 
-            <div className="absolute top-0 left-1/2 right-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-1.5 bg-foreground rounded-full"></div>
+            <div className="absolute top-0 left-1/2 right-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-1.5 bg-violet-500 rounded-full"></div>
 
             <div className="grid gap-8 xl:grid-cols-3 xl:gap-8 w-full">
 
@@ -18,8 +19,8 @@ const Footer = () => {
                         <p className="text-muted-foreground mt-4 text-sm text-start">
                             Manage your links with ease.
                         </p>
-                        <span className="mt-4 text-neutral-200 text-sm flex items-center">
-                            Made by <Link href="https://shreyas-sihasane.vercel.app/" className="font-semibold ml-1">Shreyas</Link>
+                        <span className="mt-0 text-neutral-200 text-sm flex items-center w-full">
+                            Made by   <AnimatedModalDemo/>
                         </span>
                     </div>
                 </AnimationContainer>
