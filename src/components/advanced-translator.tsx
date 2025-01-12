@@ -154,7 +154,7 @@ export default function Component() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-background to-rose-200/50 dark:to-rose-900/20 flex flex-col transition-colors duration-200">
+    <div className="min-h-screen bg-black flex flex-col transition-colors duration-200">
       <div className="flex-grow flex flex-col p-4 md:p-6 relative overflow-hidden">
         <div className="relative z-10 mx-auto w-full max-w-5xl space-y-6 flex flex-col flex-grow">
           <div className="flex items-center justify-between">
@@ -186,7 +186,7 @@ export default function Component() {
               </span>
             </div>
             <div className="flex items-center gap-4">
-              <Link href="https://github.com/subhadeeproy3902/ai-translator">
+              <Link href="">
                 <Button
                   size="icon"
                   className="rounded-full border-transparent bg-transparent hover:bg-secondary/5 shadow-md shadow-primary"
@@ -210,10 +210,10 @@ export default function Component() {
             </div>
           </div>
 
-          <div className="flex-grow grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-4 items-stretch">
+          <div className="flex-grow grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-4 items-stretch border-violet-700">
             <div className="flex flex-col gap-4">
               <Select value={inputLanguage} onValueChange={setInputLanguage}>
-                <SelectTrigger className="w-full bg-secondary">
+                <SelectTrigger className="w-full bg-violet-500 text-white">
                   <SelectValue placeholder="Select language" />
                 </SelectTrigger>
                 <SelectContent>
@@ -226,12 +226,12 @@ export default function Component() {
               </Select>
               <div className="relative flex-grow">
                 <Textarea
-                  className="min-h-[200px] absolute h-full resize-none pb-16 bg-secondary/30 rounded-lg"
+                  className="min-h-[200px] absolute h-full resize-none pb-16 bg-secondary/30 rounded-lg border-violet-700"
                   placeholder="Enter text to translate..."
                   value={inputText}
                   onChange={handleInputChange}
                 />
-                <div className="absolute border-b border-l border-r border-border bg-secondary w-full bottom-0 flex justify-between items-center p-3 rounded-lg">
+                <div className="absolute border-b border-l border-r border-border border-violet-700 bg-violet-500 w-full bottom-0 flex justify-between items-center p-3 rounded-lg">
                   <div className="flex items-center gap-2">
                     <Button
                       size="icon"
@@ -240,7 +240,7 @@ export default function Component() {
                       onClick={handleVoiceInput}
                     >
                       <Mic
-                        className={`h-4 w-4 ${
+                        className={`h-5 w-5 ${
                           isListening ? "text-rose-500" : ""
                         }`}
                       />
@@ -253,10 +253,10 @@ export default function Component() {
                         handleTextToSpeech(inputText, inputLanguage)
                       }
                     >
-                      <Volume2 className="h-4 w-4" />
+                      <Volume2 className="h-5 w-5" />
                     </Button>
                   </div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">
+                  <div className="text-sm text-white dark:text-gray-400">
                     {inputText.length} chars / {getWordCount(inputText)} words
                   </div>
                 </div>
@@ -268,9 +268,9 @@ export default function Component() {
                 variant="outline"
                 disabled={loading}
                 onClick={handleLanguageSwap}
-                className="rounded-full w-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 h-10 bg-background transition-colors duration-200 shadow-sm"
+                className="rounded-full w-10 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 h-10 bg-violet-500 text-white transition-colors duration-200 shadow-sm"
               >
-                <ArrowLeftRight className="h-5 w-5 text-primary" />
+                <ArrowLeftRight className="h-5 w-5 text-primary " />
               </Button>
 
             <div className="flex flex-col gap-4">
@@ -324,7 +324,7 @@ export default function Component() {
 
           <div className="flex gap-2 mt-4">
             <Button
-              className="flex-1"
+              className="flex-1 bg-violet-500 text-white hover:bg-purple-600"
               size="lg"
               onClick={handleTranslate}
               disabled={loading}
