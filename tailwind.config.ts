@@ -98,6 +98,10 @@ const config = {
           "0%": { "background-position": "0%" },
           "100%": { "background-position": "200%" },
         },
+        "logo-cloud": {
+           "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+       },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -209,6 +213,7 @@ const config = {
         "rotate": "rotate 3s linear infinite both",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
         "loading": "loading 0.5s linear infinite",
+        "logo-cloud": "logo-cloud 30s linear infinite",
       },
     },
   },
