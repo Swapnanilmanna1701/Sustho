@@ -40,7 +40,7 @@ export function SearchBar({ onSearch, isLoading }: SearchBarProps) {
           placeholder="Search for a word..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="search-input pr-10 h-12 text-lg font-serif border-violet-500"
+          className="search-input pr-10 h-12 text-violet-700 text-lg  font-serif border-violet-500"
           disabled={isLoading}
         />
         <AnimatePresence>

@@ -33,7 +33,7 @@ export function Definition({ definition, index }: DefinitionProps) {
           <div className="flex flex-row flex-wrap gap-3">
             {definition.synonyms.map((synonym, index) => (
               <div
-                className="px-5 bg-secondary/90 text-orange-400 mt-2 w-fit rounded-full py-1"
+                className="px-5 bg-violet-500 text-white mt-2 w-fit rounded-full py-1"
                 key={index}
               >
                 {synonym}

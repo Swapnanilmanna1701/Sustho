@@ -52,7 +52,7 @@ export function WordDefinition({ data }: WordDefinitionProps) {
         <Button
           variant="outline"
           size="icon"
-          className="rounded-full h-12 w-12 hover:scale-105 transition-transform hover:bg-primary hover:text-primary-foreground border-2"
+          className="rounded-full border-violet-500 text-violet-500 h-12 w-12 hover:scale-105 transition-transform hover:bg-violet-500 hover:text-white border-2"
           onClick={handleSpeak}
           disabled={!speechService}
         >

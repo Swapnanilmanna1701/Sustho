@@ -119,7 +119,7 @@ export default function Home() {
                       <a
                         href={url}
                         target="_blank"
-                        className="text-primary hover:underline"
+                        className="text-primary hover:underline hover:text-violet-500"
                       >
                         {url}
                       </a>
