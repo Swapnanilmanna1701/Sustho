@@ -94,6 +94,16 @@ const config = {
 				mono: ['var(--font-geist-mono)'],
       },
       keyframes: {
+        'skew-scroll': {
+          '0%': {
+            transform:
+              'rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(0)',
+          },
+          '100%': {
+            transform:
+              'rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(-100%)',
+          },
+        },
         rainbow: {
           "0%": { "background-position": "0%" },
           "100%": { "background-position": "200%" },
@@ -214,6 +224,7 @@ const config = {
         "caret-blink": "caret-blink 1.25s ease-out infinite",
         "loading": "loading 0.5s linear infinite",
         "logo-cloud": "logo-cloud 30s linear infinite",
+        'skew-scroll': 'skew-scroll 20s linear infinite',
       },
     },
   },

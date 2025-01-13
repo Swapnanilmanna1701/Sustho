@@ -3,7 +3,7 @@ import {
   MaxWidthWrapper,
   PricingCards,
 } from "@/components";
-import { BentoCard, BentoGrid, CARDS } from "@/components/ui/bento-grid";
+//import { BentoCard, BentoGrid, CARDS } from "@/components/ui/bento-grid";
 //import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
 //import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -26,6 +26,7 @@ import PopImagesParagraph from "@/components/preview";
 import AnimatedLogoCloud from "@/components/logo-cloud";
 import TextRevealButton from "@/components/text-reveal-button";
 import StarWarsButton from "@/components/star-button";
+import SkewedInfiniteScroll from "@/components/infinitescroll";
 
 //import { Spotlight } from "@/components/ui/spotlight";
 
@@ -90,11 +91,7 @@ const HomePage = async () => {
           </div>
         </AnimationContainer>
         <AnimationContainer delay={0.2}>
-          <BentoGrid className="py-8">
-            {CARDS.map((feature, idx) => (
-              <BentoCard key={idx} {...feature} />
-            ))}
-          </BentoGrid>
+          <SkewedInfiniteScroll />
         </AnimationContainer>
       </MaxWidthWrapper>
 
