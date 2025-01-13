@@ -9,8 +9,9 @@ import { SearchBar } from "@/components/SearchBar";
 import { WordDefinition } from "@/components/WordDefinition";
 import { ErrorDisplay } from "@/components/ErrorDisplay";
 import { LoadingSpinner } from "@/components/LoadingSpinner";
-import { DictionaryEntry, DictionaryError } from "@/types";
+import { DictionaryEntry, DictionaryError } from "@/types/index";
 import { Button } from "@/components/ui/button";
+import TextGradient from "@/components/TextGradient";
 
 export default function Home() {
   const [result, setResult] = useState<DictionaryEntry | null>(null);
@@ -51,9 +52,9 @@ export default function Home() {
     <motion.main
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-screen bg-background p-6 md:p-12"
+      className="min-h-screen bg-black p-6 md:p-12"
     >
-      <div className="mx-auto max-w-4xl space-y-8">
+      <div className="mx-auto max-w-4xl bg-black space-y-8">
         <motion.header
           className="flex items-center justify-between"
           initial={{ y: -20, opacity: 0 }}
@@ -61,9 +62,9 @@ export default function Home() {
           transition={{ duration: 0.5 }}
         >
           <div className="flex items-center gap-2">
-            <Book className="h-8 w-8 text-primary" />
+            <Book className="h-8 w-8 text-primary text-violet-500" />
             <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-              Dictionary
+              <TextGradient/>
             </h1>
           </div>
           <div className="flex items-center gap-4">

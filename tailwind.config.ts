@@ -94,6 +94,16 @@ const config = {
 				mono: ['var(--font-geist-mono)'],
       },
       keyframes: {
+        textGradient: {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center',
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center',
+          },
+        },
         'skew-scroll': {
           '0%': {
             transform:
@@ -225,6 +235,7 @@ const config = {
         "loading": "loading 0.5s linear infinite",
         "logo-cloud": "logo-cloud 30s linear infinite",
         'skew-scroll': 'skew-scroll 20s linear infinite',
+         textGradient: 'textGradient 5s ease infinite',
       },
     },
   },

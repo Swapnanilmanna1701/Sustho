@@ -99,7 +99,7 @@ const Footer = () => {
                                         </Link>
                                     </li>
                                     <li className="mt-2">
-                                        <Link href="/socialmedia" className="hover:text-foreground transition-all duration-300">
+                                        <Link href="/support" className="hover:text-foreground transition-all duration-300">
                                             Support
                                         </Link>
                                     </li>
