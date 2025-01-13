@@ -40,7 +40,7 @@ export function SearchBar({ onSearch, isLoading }: SearchBarProps) {
           placeholder="Search for a word..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="search-input pr-10 h-12 text-lg font-serif"
+          className="search-input pr-10 h-12 text-lg font-serif border-violet-500"
           disabled={isLoading}
         />
         <AnimatePresence>
@@ -49,9 +49,9 @@ export function SearchBar({ onSearch, isLoading }: SearchBarProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute right-3 top-3"
+              className="absolute right-3 top-3 "
             >
-              <div className="w-6 h-6 border-2 border-primary rounded-full border-t-transparent animate-spin" />
+              <div className="w-6 h-6 border-2 border-primary rounded-full border-t-transparent animate-spin text " />
             </motion.div>
           ) : (
             <Button
@@ -61,7 +61,7 @@ export function SearchBar({ onSearch, isLoading }: SearchBarProps) {
               className="absolute right-0 top-0 h-12"
               disabled={isLoading}
             >
-              <Search className="h-5 w-5" />
+              <Search className="h-5 w-5 text-violet-500" />
             </Button>
           )}
         </AnimatePresence>
@@ -71,12 +71,12 @@ export function SearchBar({ onSearch, isLoading }: SearchBarProps) {
         size="icon"
         variant="outline"
         onClick={isListening ? stopListening : startListening}
-        className={`h-12 w-12 border-2 ${
+        className={`h-12 w-12 border-2 border-violet-500 hover:bg-violet-500 hover:text-white ${
           isListening ? "animate-pulse bg-primary text-primary-foreground" : ""
         }`}
         disabled={isLoading}
       >
-        <Mic className="h-5 w-5" />
+        <Mic className="h-5 w-5 text-violet-500 hover:text-white" />
       </Button>
     </motion.form>
   );

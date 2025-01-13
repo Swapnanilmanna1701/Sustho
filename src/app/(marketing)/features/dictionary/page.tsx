@@ -73,7 +73,7 @@ export default function Home() {
           </div>
         </motion.header>
 
-        <SearchBar onSearch={handleSearch} isLoading={loading} />
+        <SearchBar onSearch={handleSearch} isLoading={loading}  />
 
         <AnimatePresence mode="wait">
           {(loading) && <LoadingSpinner />}
