@@ -6,6 +6,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
+import ShineButton from "@/components/shinebutton1"
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
     Sheet,
@@ -32,17 +33,17 @@ const MobileNavbar = () => {
     };
 
     return (
-        <div className="flex lg:hidden items-center justify-end">
+        <div className="flex lg:hidden items-center text-violet-500 justify-end">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
                     <Button size="icon" variant="ghost">
-                        <Menu className="w-5 h-5" />
+                        <Menu className="w-5 h-5 text-violet-500" />
                     </Button>
                 </SheetTrigger>
                 <SheetContent className="w-screen">
                     <SheetClose asChild className="absolute top-3 right-5 bg-background z-20 flex items-center justify-center">
-                        <Button size="icon" variant="ghost" className="text-neutral-600">
-                            <X className="w-5 h-5" />
+                        <Button size="icon" variant="ghost" className="text-violet-500">
+                            <X className="w-5 h-5 text-violet-500 hover:bg-violet-500 hover:text-white" />
                         </Button>
                     </SheetClose>
                     <div className="flex flex-col items-start w-full py-2 mt-10">
@@ -56,8 +57,8 @@ const MobileNavbar = () => {
                                     <Link href="/auth/sign-in" className={buttonVariants({ variant: "outline", className: "w-full" })}>
                                         Sign In
                                     </Link>
-                                    <Link href="/auth/sign-up" className={buttonVariants({ className: "w-full" })}>
-                                        Sign Up
+                                    <Link href="/auth/sign-up" className="w-full">
+                                        <ShineButton />
                                     </Link>
                                 </>
                             )}

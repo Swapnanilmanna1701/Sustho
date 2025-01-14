@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn, NAV_LINKS } from "@/utils";
 import { useClerk } from "@clerk/nextjs";
-import { LucideIcon, ZapIcon } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useState } from 'react';
 import MaxWidthWrapper from "../global/max-width-wrapper";
@@ -21,6 +21,7 @@ import EcoModeButton from "@/components/EcoButton";
 
 import MobileNavbar from "./mobile-navbar";
 import AnimationContainer from "../global/animation-container";
+import GradientFillButton from "@/components/fillbutton";
 
 const Navbar = () => {
 
@@ -124,8 +125,8 @@ const Navbar = () => {
                             </div>
                         ) : (
                             <div className="flex items-center gap-x-4">
-                                <Link href="/auth/sign-in" className={buttonVariants({ size: "sm", variant: "ghost" })}>
-                                    Sign In
+                                <Link href="/auth/sign-in" >
+                                    <GradientFillButton/>
                                 </Link>
                                 <Link href="/auth/sign-up">
                                     <EcoModeButton />
