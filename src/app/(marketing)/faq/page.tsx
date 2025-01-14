@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import gradientStyle from "@/styles/gradient.module.css";
 import { cn } from "@/utils/functions/cn";
-
+import { TextAnimate } from "@/components/text-effect";
 type Tab = {
   id: string;
   label: string;
@@ -137,30 +137,30 @@ const FAQ: React.FC = () => {
   const [openItem, setOpenItem] = useState<number | null>(null);
 
   return (
-    <div className="mx-auto max-w-3xl text-gray-800 dark:text-gray-200 sm:p-6">
+    <div className="mx-auto max-w-3xl text-gray-600 dark:text-gray-200 sm:p-6">
       <h1 className="mb-4 text-center text-3xl font-bold">
-      <span
-							className={cn(
-								"bg-gradient-to-tr from-zinc-100 via-zinc-200/50 to-zinc-200/90 text-transparent bg-clip-text animate-gradient",
-								gradientStyle.magicText,
-							)}
-						>
-							Frequently
-						</span>{" "}
-        asked questions
+        Frequently Asked Questions About{" "}
+        <span
+          className={cn(
+            "bg-gradient-to-tr from-zinc-100 via-zinc-200/50 to-zinc-200/90 text-transparent bg-clip-text animate-gradient",
+            gradientStyle.magicText
+          )}
+        >
+          MatrX AI
+        </span>
       </h1>
-      <p className="mb-12 text-center text-white dark:text-gray-400">
-        Need help with something? Here are our most frequently asked questions.
-      </p>
+      <TextAnimate animation="blurInUp" by="character" className="mb-5 text-violet-500">
+        Get all the commonly asked questions along with answers related to MatrX AI instantly.  
+      </TextAnimate>
 
-      <div className="mx-auto mb-10 flex max-w-lg space-x-1 rounded-lg border border-gray-300 p-1 dark:border-[#27272a]">
+      <div className="mx-auto mb-10 flex max-w-lg space-x-1 rounded-lg border border-violet-500 p-1 dark:border-[#27272a]">
         {tabData.map((tab) => (
           <motion.button
             key={tab.id}
             className={`flex-1 rounded px-3 py-2 text-sm font-medium ${
               activeTab === tab.id
-                ? "border border-[#e4e4e7] bg-gray-300/40 font-semibold dark:border-[#27272a] dark:bg-gray-700/10"
-                : "border border-transparent text-gray-500 hover:bg-gray-300/40 hover:dark:border-[#27272a] hover:dark:bg-gray-700/10 hover:dark:text-gray-300"
+                ? "border border-[#8316ff] bg-violet-700 font-semibold dark:border-[#27272a] dark:bg-gray-700/10 text-white"
+                : "border border-transparent text-gray-300 hover:bg-violet-400 hover:dark:border-[#27272a] hover:dark:bg-gray-700/10 hover:dark:text-gray-300"
             }`}
             onClick={() => {
               setActiveTab(tab.id);

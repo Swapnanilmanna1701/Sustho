@@ -149,7 +149,7 @@ const Footer = () => {
             </div>
 
             <div className="h-[20rem] lg:h-[20rem] hidden md:flex items-center justify-center">
-                <TextHoverEffect text="LINKIFY" />
+                <TextHoverEffect text="MatrX AI" />
             </div>
         </footer>
     )
