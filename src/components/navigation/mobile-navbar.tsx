@@ -63,10 +63,10 @@ const MobileNavbar = () => {
                                 </>
                             )}
                         </div>
-                        <ul className="flex flex-col items-start w-full mt-6">
-                            <Accordion type="single" collapsible className="!w-full">
+                        <ul className="text-violet-500 flex flex-col items-start w-full mt-6">
+                            <Accordion type="single" collapsible className="!w-full text-violet-500">
                                 {NAV_LINKS.map((link) => (
-                                    <AccordionItem key={link.title} value={link.title} className="last:border-none">
+                                    <AccordionItem key={link.title} value={link.title} className="last:border-none text-violet-500">
                                         {link.menu ? (
                                             <>
                                                 <AccordionTrigger>
@@ -76,7 +76,7 @@ const MobileNavbar = () => {
                                                     <ul
                                                         onClick={handleClose}
                                                         className={cn(
-                                                            "w-full",
+                                                            "w-full text-violet-500",
                                                         )}
                                                     >
                                                         {link.menu.map((menuItem) => (
@@ -91,7 +91,7 @@ const MobileNavbar = () => {
                                             <Link
                                                 href={link.href}
                                                 onClick={handleClose}
-                                                className="flex items-center w-full py-4 font-medium text-muted-foreground hover:text-foreground"
+                                                className="flex text-violet-500 items-center w-full py-4 font-medium text-muted-foreground hover:text-foreground"
                                             >
                                                 <span>{link.title}</span>
                                             </Link>
