@@ -28,6 +28,7 @@ import TextRevealButton from "@/components/text-reveal-button";
 import StarWarsButton from "@/components/star-button";
 import SkewedInfiniteScroll from "@/components/infinitescroll";
 
+
 //import { Spotlight } from "@/components/ui/spotlight";
 
 const HomePage = async () => {
