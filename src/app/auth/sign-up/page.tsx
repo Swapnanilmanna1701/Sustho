@@ -1,15 +1,21 @@
-import { Icons, SignUpForm } from "@/components";
+import {  SignUpForm } from "@/components";
 import Link from "next/link";
+import gradientStyle from "@/styles/gradient.module.css";
+import {cn} from "@/utils/functions/cn"
 
 const SignUpPage = () => {
     return (
         <div className="flex flex-col items-start max-w-sm mx-auto h-dvh overflow-hidden pt-4 md:pt-20">
-            <div className="flex items-center w-full py-8 border-b border-border/80">
+            <div className="flex items-center w-full py-4 border-b border-border/80 font-bold text-lg">
                 <Link href="/#home" className="flex items-center gap-x-2">
-                    <Icons.logo className="w-6 h-6" />
-                    <h1 className="text-lg font-medium">
-                        linkify
-                    </h1>
+                <span
+                className={cn(
+                  "bg-gradient-to-tr from-zinc-100 via-zinc-200/50 to-zinc-200/90 text-transparent bg-clip-text animate-gradient",
+                  gradientStyle.magicText
+                )}
+              >
+                MatrX AI
+              </span>
                 </Link>
             </div>
 
