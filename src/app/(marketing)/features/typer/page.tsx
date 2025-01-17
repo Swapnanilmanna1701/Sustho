@@ -1,12 +1,16 @@
-import { Hero } from '@/components/typer/Hero'
-import { ThemeProvider } from '@/components/typer/theme-provider'
+import { Hero } from '@/components/typer/Hero';
 
-export default function Home() {
+//import { ThemeProvider } from '@/components/typer/theme-provider'
+
+const Home =() => {
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-      <main className=" ">
+    
+      <main >
+       
         <Hero />    
+     
       </main>
-    </ThemeProvider>
+    
   )
 }
+export default Home;

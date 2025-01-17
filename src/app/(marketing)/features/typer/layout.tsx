@@ -8,8 +8,8 @@ import { ThemeProvider } from '@/components/typer/theme-provider';
 
 
 export const metadata: Metadata = {
-  title: "TypeArena",
-  description: "A typing test game",
+  title: "MatrX AI",
+  description: "Be Unstoppable",
 };
 
 export default function RootLayout({
@@ -20,11 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+      className='bg-black'
         
       > 
       <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            
             enableSystem
             disableTransitionOnChange
           >

@@ -45,7 +45,7 @@ export function Navbar() {
   }
 
   return (
-    <header className="mx-auto dark:bg-background p-6 border-b  w-full ">
+    <header className="mx-auto bg-black p-6 border-b  w-full ">
       <nav className="flex justify-between items-center">
         <h1 className="text-2xl dark:text-black font-bold text-gray-900">
         <Link href="/" className="text-2xl font-semibold text-yellow-500">

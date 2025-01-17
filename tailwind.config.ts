@@ -104,6 +104,11 @@ const config = {
             'background-position': 'right center',
           },
         },
+        gradient: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
         'skew-scroll': {
           '0%': {
             transform:
@@ -236,6 +241,7 @@ const config = {
         "logo-cloud": "logo-cloud 30s linear infinite",
         'skew-scroll': 'skew-scroll 20s linear infinite',
          textGradient: 'textGradient 5s ease infinite',
+         gradient: 'gradient 8s linear infinite'
       },
     },
   },
