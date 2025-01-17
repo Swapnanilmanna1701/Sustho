@@ -1,6 +1,6 @@
 const TextRevealButton = () => {
     return (
-      <button className="group/button relative inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-violet-500 font-medium text-white transition-all duration-300 hover:w-48 hover:text-bold">
+      <button className="group/button relative inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-violet-500 font-medium text-white transition-all duration-300 hover:w-48 ">
         <p className="inline-flex whitespace-nowrap text-xs opacity-0 transition-all duration-200 group-hover/button:-translate-x-2.5 group-hover/button:opacity-100 hover:text-lg">
           Start Typing Now
         </p>

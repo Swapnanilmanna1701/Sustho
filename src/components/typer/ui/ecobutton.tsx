@@ -1,81 +1,31 @@
-"use client"
-import React, { useState, useRef, useEffect } from 'react'
-import { motion, useAnimation } from 'framer-motion'
+import React from "react";
+import { cn } from "@/utils/functions/cn";
 
-interface Star {
-  id: number
-  x: number
-  y: number
-  size: number
-  speed: number
-}
+interface RainbowButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
-const StarWarsButton: React.FC = () => {
-  const buttonRef = useRef<HTMLButtonElement>(null)
-  const [stars, setStars] = useState<Star[]>([])
-  const controls = useAnimation()
-
-  useEffect(() => {
-    const generateStars = () => {
-      if (buttonRef.current) {
-        const { width, height } = buttonRef.current.getBoundingClientRect()
-        setStars(
-          Array.from({ length: 50 }, (_, i) => ({
-            id: i,
-            x: Math.random() * width,
-            y: Math.random() * height,
-            size: Math.random() * 2 + 1,
-            speed: Math.random() * 50 + 20,
-          })),
-        )
-      }
-    }
-
-    generateStars()
-    window.addEventListener('resize', generateStars)
-    return () => window.removeEventListener('resize', generateStars)
-  }, [])
-
+export const RainbowButton = React.forwardRef<
+  HTMLButtonElement,
+  RainbowButtonProps
+>(({ children, className, ...props }, ref) => {
   return (
-    <motion.button
-      ref={buttonRef}
-      className="text-md relative overflow-hidden rounded-full border-2 border-violet-500 bg-black px-8 py-2.5 font-semibold text-white focus:outline-none"
-      style={{
-        boxShadow:
-          '0 0 10px rgba(137, 32, 255, 0.8), 0 0 20px rgba(138, 34, 255, 0.8)',
-      }}
-      animate={controls}
-      whileTap={{ scale: 0.95 }}
-      whileHover={{
-        boxShadow:
-          '0 0 15px rgba(137, 32, 255, 0.8), 0 0 30px rgba(138, 34, 255, 0.8)',
-      }}
+    <button
+      ref={ref}
+      className={cn(
+        "group relative inline-flex h-11 animate-rainbow cursor-pointer items-center justify-center rounded-xl border-0 bg-[length:200%] px-8 py-2 font-medium text-primary-foreground transition-colors [background-clip:padding-box,border-box,border-box] [background-origin:border-box] [border:calc(0.08*1rem)_solid_transparent] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+        // before styles
+        "before:absolute before:bottom-[-20%] before:left-1/2 before:z-0 before:h-1/5 before:w-3/5 before:-translate-x-1/2 before:animate-rainbow before:bg-[linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))] before:[filter:blur(calc(0.8*1rem))]",
+        // light mode colors
+        "bg-[linear-gradient(#121213,#121213),linear-gradient(#121213_50%,rgba(18,18,19,0.6)_80%,rgba(18,18,19,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]",
+        // dark mode colors
+        "dark:bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]",
+        className,
+      )}
+      {...props}
     >
-      {stars.map((star) => (
-        <motion.div
-          key={star.id}
-          className="absolute rounded-full bg-violet-700"
-          style={{
-            left: star.x,
-            top: star.y,
-            width: star.size,
-            height: star.size,
-          }}
-          animate={{
-            x: `-${star.speed}%`,
-            opacity: [0, 1, 0],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: 'linear',
-            delay: Math.random() * 2,
-          }}
-        />
-      ))}
-      <span className="relative z-10">Introducing MatrX AI For Typing</span>
-    </motion.button>
-  )
-}
+      {children}
+    </button>
+  );
+});
 
-export default StarWarsButton;
+RainbowButton.displayName = "RainbowButton";

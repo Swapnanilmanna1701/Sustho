@@ -19,7 +19,7 @@ import { AnimatedTooltipPreview } from "./AnimatedTooltip";
 import { motion } from "framer-motion";
 import { Spotlight } from "../typer/ui/Spotlight";
 import GradientText from "@/components/typer/ui/gradient-text";
-import EcoModeButton from "@/components/typer/ui/ecobutton"
+import {RainbowButton} from "@/components/typer/ui/ecobutton"
 const fadeInUp = {
   initial: { opacity: 0, y: 50 },
   animate: { opacity: 1, y: 0 },
@@ -132,7 +132,7 @@ export default function TypeArenaLanding() {
           variants={fadeInUp}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <EcoModeButton />
+          <RainbowButton>Introducing MatrX AI For typing</RainbowButton>
           <motion.h1
             variants={fadeInUp}
             transition={{ delay: 0.4, duration: 0.8 }}
