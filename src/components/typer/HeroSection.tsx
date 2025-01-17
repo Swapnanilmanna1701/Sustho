@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import TextRevealButton from "@/components/typer/ui/startbutton"
 import {
   
   Timer,
@@ -10,7 +11,7 @@ import {
   Target,
   Zap,
   Coffee,
-  ArrowRight,
+
 } from "lucide-react";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -161,10 +162,9 @@ export default function TypeArenaLanding() {
           >
             <Link
               href="/playground"
-              className="bg-yellow-500 text-white px-8 py-3 rounded-full hover:bg-yellow-600 transition-colors inline-flex items-center text-lg font-medium"
+              className=" text-white px-8 py-3 rounded-full  transition-colors inline-flex items-center text-lg font-medium"
             >
-              Start Typing Now
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <TextRevealButton />
             </Link>
           </motion.div>
         </motion.div>

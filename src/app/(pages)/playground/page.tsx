@@ -106,11 +106,11 @@ export default function TypingTest() {
   }
 
   return (
-    <div className="container min-h-screen mx-auto px-6 py-8">
-      <Card className="border-none">
+    <div className=" bg-black min-h-screen mx-auto px-6 py-8">
+      <Card className="border-none bg-black">
         <CardContent>
           {(!isDialogOpen) && (
-            <div className="space-y-6">
+            <div className="space-y-6 ">
               <div className="flex items-center justify-between text-lg font-medium">
                 <div className="flex items-center space-x-3">
                   <Clock className="w-8 h-8" />
@@ -120,7 +120,7 @@ export default function TypingTest() {
                 </div>
               </div>
 
-              <div className="relative min-h-[500px] w-full rounded-lg bg-background p-4 font-mono text-xl md:text-3xl">
+              <div className="relative min-h-[500px] w-full bg-black rounded-lg bg-background p-4 font-mono text-xl md:text-3xl">
                 <div
                   className="absolute inset-0 p-4 pointer-events-none whitespace-pre-wrap break-words leading-relaxed tracking-wide"
                   style={{ wordSpacing: "0.25em" }}
@@ -132,7 +132,7 @@ export default function TypingTest() {
                       className={
                         index < typedText.length
                           ? typedText[index] === char
-                            ? "text-green-500 dark:text-gray-200"
+                            ? "text-violet-500 dark:text-gray-200"
                             : "text-red-500"
                           : "text-gray-500"
                       }

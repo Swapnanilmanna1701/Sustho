@@ -73,7 +73,7 @@ const StarWarsButton: React.FC = () => {
           }}
         />
       ))}
-      <span className="relative z-10">Introducing TyperX</span>
+      <span className="relative z-10">Introducing MatrX AI For Typing</span>
     </motion.button>
   )
 }
