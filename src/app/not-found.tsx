@@ -1,10 +1,10 @@
-import { Footer, Navbar } from '@/components';
+import {  Navbar } from '@/components';
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 
 const NotFound = () => {
     return (
-        <main className="relative flex flex-col items-center justify-center px-4">
+        <main className="relative flex flex-col items-center bg-black justify-center px-4">
 
             <Navbar />
 
@@ -33,7 +33,7 @@ const NotFound = () => {
 
             </div>
 
-            <Footer />
+            
 
         </main>
     )

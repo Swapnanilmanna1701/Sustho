@@ -7,7 +7,7 @@ interface Props {
 
 const MarketingLayout = ({ children }: Props) => {
     return (
-        <div className='bg-black'>
+        <div className='bg-black suppressHydrationWarning'>
             <div id="home" className="absolute bg-black w-full h-full" />
             <Navbar />
             <main className="mt-20 mx-auto bg-black w-full z-0 relative">
