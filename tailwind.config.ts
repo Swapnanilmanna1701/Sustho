@@ -248,6 +248,7 @@ const config = {
   plugins: [
     require("tailwindcss-animate"),
     require("tailwind-scrollbar-hide"),
+    require("daisyui"),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(

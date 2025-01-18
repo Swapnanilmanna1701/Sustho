@@ -70,6 +70,20 @@ export const NAV_LINKS = [
                 href: "/features/coder",
                 icon: QrCodeIcon,
             }
+            ,
+            {
+                title: "Quiz",
+                tagline: "Use QR codes to reach your audience.",
+                href: "/features/quiz",
+                icon: QrCodeIcon,
+            }
+            ,
+            {
+                title: "ShareX",
+                tagline: "Use QR codes to reach your audience.",
+                href: "/features/sharex",
+                icon: QrCodeIcon,
+            }
         ],
     },
     {
