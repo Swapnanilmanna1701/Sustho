@@ -84,6 +84,13 @@ export const NAV_LINKS = [
                 href: "/features/sharex",
                 icon: QrCodeIcon,
             }
+            ,
+            {
+                title: "Screenshot",
+                tagline: "Use QR codes to reach your audience.",
+                href: "/features/screenshot",
+                icon: QrCodeIcon,
+            }
         ],
     },
     {
