@@ -12,6 +12,7 @@ import {
 import { Monitor, Users } from "lucide-react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import GradientText from "@/components/typer/ui/gradient-text"
 
 import { MagicCard } from "@/components/sharex/ui/magicCard";
 
@@ -24,10 +25,17 @@ export default function Hero() {
         <HeartbeatButton />
         <div className=" mb-10 lg:mb-0">
           <h1 className="text-4xl max-w-2xl sm:text-5xl lg:text-6xl font-bold text-transparent mb-4 tracking-tight bg-gradient-to-br from-foreground to-muted-foreground/70 bg-clip-text">
-            Share Your Screen, <span className="text-primary">Connect</span> in
+            Share Your Screen, <span><GradientText
+                          colors={["#8409ff", "#3c00e9", "#a004ff", "#4079ff", "#eee4ff"]}
+                          animationSpeed={3}
+                          showBorder={false}
+                          className="custom-class text-bold text-7xl"
+                        >
+                          ShareX
+                        </GradientText></span> in
             Real-Time
           </h1>
-          <p className="md:text-xl mb-8 opacity-80">
+          <p className="md:text-xl mb-8 text-violet-500 opacity-80">
             Collaborate seamlessly with our powerful screen sharing and live
             chat platform.
           </p>
