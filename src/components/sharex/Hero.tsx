@@ -1,7 +1,8 @@
 "use client"
 import { Button } from "@/components/sharex/ui/button";
+import { InteractiveHoverButton } from "@/components/sharex/ui/hover-button";
 import {
-  Card,
+  
   CardContent,
   CardDescription,
   CardHeader,
@@ -31,41 +32,40 @@ export default function Hero() {
         </div>
         <div className="grid md:grid-cols-2 gap-6 mt-12">
           <MagicCard className="cursor-pointer flex-col items-center justify-center whitespace-nowrap text-4xl shadow-2xl "
-        gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}>
+        gradientColor={theme === "dark" ? "#262626" : "#8a2eff"}>
             <CardHeader>
-              <CardTitle className="flex items-center text-violet-500  gap-2">
+              <CardTitle className="flex items-center text-white  gap-2">
                 <Monitor className="h-6 w-6" />
                 Start Sharing
               </CardTitle>
-              <CardDescription>
+              <CardDescription className="text-white">
                 Create a room and share your screen with others
               </CardDescription>
             </CardHeader>
             <CardContent>
               <Link href="/host">
-                <Button className="w-full ">Create Room</Button>
+              <InteractiveHoverButton>Create Room</InteractiveHoverButton>
               </Link>
             </CardContent>
           </MagicCard>
 
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader>
+          <MagicCard className="cursor-pointer flex-col items-center justify-center whitespace-nowrap text-4xl shadow-2xl "
+        gradientColor={theme === "dark" ? "#262626" : "#8a2eff"}>
+            <CardHeader className="text-white">
               <CardTitle className="flex items-center gap-2">
                 <Users className="h-6 w-6" />
                 Join a Room
               </CardTitle>
-              <CardDescription>
+              <CardDescription className="text-white">
                 Enter a room code to view someone screen
               </CardDescription>
             </CardHeader>
             <CardContent>
               <Link href="/join">
-                <Button variant="outline" className="w-full">
-                  Join Room
-                </Button>
+              <InteractiveHoverButton>Join Room</InteractiveHoverButton>
               </Link>
             </CardContent>
-          </Card>
+          </MagicCard>
         </div>
       </div>
     </section>
