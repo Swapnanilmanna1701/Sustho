@@ -104,6 +104,20 @@ const config = {
             'background-position': 'right center',
           },
         },
+        buttonheartbeat: {
+          '0%': {
+            'box-shadow': '0 0 0 0 theme("colors.violet.500")',
+            transform: 'scale(1)',
+          },
+          '50%': {
+            'box-shadow': '0 0 0 7px theme("colors.violet.500/0")',
+            transform: 'scale(1.05)',
+          },
+          '100%': {
+            'box-shadow': '0 0 0 0 theme("colors.violet.500/0")',
+            transform: 'scale(1)',
+          },
+        },
         gradient: {
           '0%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
@@ -241,7 +255,8 @@ const config = {
         "logo-cloud": "logo-cloud 30s linear infinite",
         'skew-scroll': 'skew-scroll 20s linear infinite',
          textGradient: 'textGradient 5s ease infinite',
-         gradient: 'gradient 8s linear infinite'
+         gradient: 'gradient 8s linear infinite',
+         buttonheartbeat: 'buttonheartbeat 2s infinite ease-in-out',
       },
     },
   },

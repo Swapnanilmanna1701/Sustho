@@ -1,5 +1,6 @@
 "use client"
-import { Button } from "@/components/sharex/ui/button";
+//import { Button } from "@/components/sharex/ui/button";
+import HeartbeatButton from "@/components/sharex/ui/heartbutton"
 import { InteractiveHoverButton } from "@/components/sharex/ui/hover-button";
 import {
   
@@ -18,9 +19,10 @@ import { MagicCard } from "@/components/sharex/ui/magicCard";
 export default function Hero() {
   const { theme } = useTheme();
   return (
-    <section className="py-28 bg-black px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-black px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto flex flex-col items-center justify-center">
-        <div className="mb-10 lg:mb-0">
+        <HeartbeatButton />
+        <div className=" mb-10 lg:mb-0">
           <h1 className="text-4xl max-w-2xl sm:text-5xl lg:text-6xl font-bold text-transparent mb-4 tracking-tight bg-gradient-to-br from-foreground to-muted-foreground/70 bg-clip-text">
             Share Your Screen, <span className="text-primary">Connect</span> in
             Real-Time
