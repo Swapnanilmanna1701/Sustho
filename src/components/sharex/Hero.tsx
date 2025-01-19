@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/sharex/ui/button";
 import {
   Card,
@@ -8,8 +9,13 @@ import {
 } from "./ui/card";
 import { Monitor, Users } from "lucide-react";
 import Link from "next/link";
+import { useTheme } from "next-themes";
+
+import { MagicCard } from "@/components/sharex/ui/magicCard";
+
 
 export default function Hero() {
+  const { theme } = useTheme();
   return (
     <section className="py-28 bg-black px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto flex flex-col items-center justify-center">
@@ -24,9 +30,10 @@ export default function Hero() {
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-6 mt-12">
-          <Card className="hover:shadow-lg transition-shadow">
+          <MagicCard className="cursor-pointer flex-col items-center justify-center whitespace-nowrap text-4xl shadow-2xl "
+        gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}>
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
+              <CardTitle className="flex items-center text-violet-500  gap-2">
                 <Monitor className="h-6 w-6" />
                 Start Sharing
               </CardTitle>
@@ -36,10 +43,10 @@ export default function Hero() {
             </CardHeader>
             <CardContent>
               <Link href="/host">
-                <Button className="w-full">Create Room</Button>
+                <Button className="w-full ">Create Room</Button>
               </Link>
             </CardContent>
-          </Card>
+          </MagicCard>
 
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader>
