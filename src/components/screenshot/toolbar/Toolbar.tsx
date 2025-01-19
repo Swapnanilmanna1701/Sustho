@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect } from "react";
 import { ArrowUpTrayIcon } from "@heroicons/react/24/outline";
 import Background from "./tools/background/Background";

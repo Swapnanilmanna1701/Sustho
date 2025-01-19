@@ -1,3 +1,4 @@
+"use client"
 import { ArrowsPointingOutIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import ClickAwayListener from "react-click-away-listener";
