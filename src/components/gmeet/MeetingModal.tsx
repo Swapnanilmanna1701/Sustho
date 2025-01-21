@@ -3,7 +3,7 @@ import React from "react";
 import { ReactNode } from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { cn } from "@/lib/utils";
+import { cn } from '@/utils/functions/cn';
 import {
     Dialog,
     DialogContent,
@@ -11,7 +11,7 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
-  } from "@/components/ui/dialog"
+  } from "@/components/gmeet/ui/dialog"
   
 interface MeetingModalProps {
   isOpen: boolean;

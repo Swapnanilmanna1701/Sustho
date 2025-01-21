@@ -1,5 +1,5 @@
 "use client";
-import MeetingTypeList from "@/components/MeetingTypeList";
+import MeetingTypeList from "@/components/gmeet/MeetingTypeList";
 import React, { useState } from "react";
 import ReactDatePicker from "react-datepicker";
 

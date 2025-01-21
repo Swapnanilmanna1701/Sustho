@@ -1,4 +1,4 @@
-import CallList from '@/components/CallList'
+import CallList from '@/components/gmeet/CallList'
 import React from 'react'
 
 const Previous = () => {
@@ -12,4 +12,4 @@ const Previous = () => {
   )
 }
 
-export default Previous
+export default Previous;

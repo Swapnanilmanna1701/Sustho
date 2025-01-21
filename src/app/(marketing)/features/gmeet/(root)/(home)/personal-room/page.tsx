@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useUser } from "@clerk/nextjs";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/gmeet//ui/button";
 import { toast, useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import { useStreamVideoClient } from "@stream-io/video-react-sdk";

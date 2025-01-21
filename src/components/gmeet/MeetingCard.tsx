@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/functions/cn";
 import { Button } from "./ui/button";
-import { avatarImages } from "@/constants";
+import { avatarImages } from "@/constants/index";
 import { useToast } from "./ui/use-toast";
 
 interface MeetingCardProps {

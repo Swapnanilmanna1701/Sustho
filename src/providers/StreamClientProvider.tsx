@@ -3,7 +3,7 @@ import { StreamVideo, StreamVideoClient } from "@stream-io/video-react-sdk";
 import { ReactNode, useEffect, useState } from "react";
 import { useUser } from "@clerk/nextjs";
 import { tokenProvider } from "@/actions/stream.actions";
-import Loader from "@/components/Loader";
+import Loader from "@/components/gmeet/Loader";
 const apiKey = process.env.NEXT_PUBLIC_STREAM_API_KEY;
 
 const StreamVideoProvider = ({ children }: { children: ReactNode }) => {

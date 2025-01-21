@@ -91,6 +91,13 @@ export const NAV_LINKS = [
                 href: "/features/screenshot",
                 icon: QrCodeIcon,
             }
+            ,
+            {
+                title: "LiveX",
+                tagline: "Use QR codes to reach your audience.",
+                href: "/features/gmeet",
+                icon: QrCodeIcon,
+            }
         ],
     },
     {

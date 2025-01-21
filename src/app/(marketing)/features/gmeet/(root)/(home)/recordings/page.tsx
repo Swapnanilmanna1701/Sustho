@@ -1,4 +1,4 @@
-import CallList from '@/components/CallList';
+import CallList from '@/components/gmeet/CallList';
 import React from 'react'
 
 const Recordings = () => {
