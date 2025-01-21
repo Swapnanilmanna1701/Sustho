@@ -1,8 +1,8 @@
-"use client"
+
 import Head from "next/head";
 import { useState } from "react";
 import Header from "@/components/screenshot/header/Header";
-import Parent from "@/components/screenshot/parent/Parent";
+//import Parent from "@/components/screenshot/parent/Parent";
 import Toolbar from "@/components/screenshot/toolbar/Toolbar";
 import { ToastContainer } from "react-toastify";
 import Script from "next/script";
@@ -72,7 +72,7 @@ export default function Home() {
       />
       <main className="min-h-[100vh]">
         <Header />
-        <Parent img={img} />
+        
         {/* <LocalView/> */}
         <Toolbar onImageChange={onImageChange} img={img} />
       </main>

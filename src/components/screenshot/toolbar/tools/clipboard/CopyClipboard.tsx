@@ -1,3 +1,4 @@
+"use client"
 import { ArrowDownTrayIcon, ClipboardIcon } from "@heroicons/react/24/outline";
 import React, { useEffect } from "react";
 import * as htmlToImage from "html-to-image";

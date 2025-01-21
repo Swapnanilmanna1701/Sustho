@@ -1,3 +1,4 @@
+"use client"
 import {
   RectangleStackIcon,
 } from "@heroicons/react/24/outline";

@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 
 export default function Resizer({ app, label, aspect, ring = false }) {

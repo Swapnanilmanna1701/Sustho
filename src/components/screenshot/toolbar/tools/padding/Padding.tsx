@@ -1,3 +1,4 @@
+"use client"
 import { ViewfinderCircleIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
 import ClickAwayListener from "react-click-away-listener";
