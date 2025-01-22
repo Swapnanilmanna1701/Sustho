@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import GradientText from "@/components/typer/ui/gradient-text";
+
 import { PulsatingButton } from "@/components/installer/stylebutton";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -76,30 +78,35 @@ function DevToolsSelector() {
     setCurrentPage((prev) => Math.max(prev - 1, 0));
   };
 
-  const ProgressBar = () => (
-    <div className="w-full bg-gray-200 h-2 rounded-full mb-8">
-      <motion.div
-        className="bg-blue-500 h-2 rounded-full"
-        initial={{ width: "0%" }}
-        animate={{ width: `${((currentPage + 1) / 3) * 100}%` }}
-        transition={{ duration: 0.5 }}
-      />
-    </div>
-  );
+  
 
   return (
     <div className="w-full text-center mx-auto p-6 bg-black">
-      <div className="flex justify-center mb-6">
+      <div className="flex justify-center mb-10">
       <PulsatingButton className="">Introducing MatrX AI For Installation Command</PulsatingButton>
       </div>
       <h1 className="text-2xl md:text-3xl font-bold mb-4 text-center">
-        Welcome to Installerr{" "}
+        Welcome to {" "}<span><GradientText
+                      colors={["#8409ff", "#3c00e9", "#a004ff", "#4079ff", "#eee4ff"]}
+                      animationSpeed={3}
+                      showBorder={false}
+                      className="custom-class text-bold text-7xl"
+                    >
+                      InstallX
+                    </GradientText></span>powered by {" "}<span><GradientText
+                      colors={["#8409ff", "#3c00e9", "#a004ff", "#4079ff", "#eee4ff"]}
+                      animationSpeed={3}
+                      showBorder={false}
+                      className="custom-class text-bold text-7xl"
+                    >
+                      MatrX AI
+                    </GradientText></span>
         <span className="text-sm text-muted-foreground">
-          (such a creative name, right?)
+          
         </span>
       </h1>
 
-      <ProgressBar />
+      
 
       <AnimatePresence initial={false} custom={direction} mode="wait">
         <motion.div
