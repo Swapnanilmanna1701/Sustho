@@ -105,6 +105,13 @@ export const NAV_LINKS = [
                 href: "/features/installer",
                 icon: QrCodeIcon,
             }
+            ,
+            {
+                title: "Question",
+                tagline: "Use QR codes to reach your audience.",
+                href: "/features/question",
+                icon: QrCodeIcon,
+            }
         ],
     },
     {
