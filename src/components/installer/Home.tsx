@@ -28,7 +28,7 @@ const container = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-background/80">
+    <div className="min-h-screen bg-black">
       {/* Hero Section */}
       <motion.div
         className="max-w-6xl mx-auto pt-20 px-6"

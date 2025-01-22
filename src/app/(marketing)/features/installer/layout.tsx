@@ -8,9 +8,9 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Installerr",
+  title: "MatrX AI",
   description:
-    "Installerr is an awesome tool for setting up your dev environment!",
+    "Be Unstoppable",
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system">
+        <ThemeProvider attribute="class">
           {children}
           <Analytics />
           <Toaster />

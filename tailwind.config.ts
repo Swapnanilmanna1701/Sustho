@@ -111,6 +111,11 @@ const config = {
 				mono: ['var(--font-geist-mono)'],
       },
       keyframes: {
+        pulse: {
+          "0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color)" },
+          "50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
+        },
+        
         textGradient: {
           '0%, 100%': {
             'background-size': '200% 200%',
@@ -273,6 +278,8 @@ const config = {
         'skew-scroll': 'skew-scroll 20s linear infinite',
          textGradient: 'textGradient 5s ease infinite',
          gradient: 'gradient 8s linear infinite',
+         pulse: "pulse var(--duration) ease-out infinite",
+
          buttonheartbeat: 'buttonheartbeat 2s infinite ease-in-out',
       },
     },
