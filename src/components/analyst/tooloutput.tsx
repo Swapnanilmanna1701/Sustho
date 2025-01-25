@@ -1,4 +1,4 @@
-"use client"
+
 import { Result } from "@e2b/code-interpreter";
 import { useState } from "react";
 import { ToolResult } from "@/lib/types";
@@ -15,7 +15,7 @@ export function ToolOutput({ result }: { result: ToolResult | undefined }) {
 
   if (toolResult?.error) {
     return (
-      <div className="text-red-500 border border-red-200 rounded-xl bg-red-500/10 text-sm">
+      <div className="text-violet-700 border border-red-200 rounded-xl bg-red-500/10 text-sm">
         <div className="flex items-center gap-2 pt-4 px-4">
           <AlertTriangle className="w-4 h-4" />
           <span className="font-semibold">Error: {toolResult.error.name}</span>
@@ -26,16 +26,16 @@ export function ToolOutput({ result }: { result: ToolResult | undefined }) {
   }
 
   return toolResult.results.map((result: Result, index: number) => (
-    <div key={index} className="flex flex-col border rounded-xl shadow-sm">
+    <div key={index} className="flex flex-col border-violet-500 rounded-xl shadow-sm">
       <div className="flex items-center justify-between p-2">
         <div className="p-2 font-semibold text-gray-800 text-sm flex items-center gap-2">
           <ChartNoAxesCombined className="w-4 h-4" />
-          {result.extra?.chart.title}
+          {result.extra.chart.title}
         </div>
         <div className="flex justify-end border rounded-lg overflow-hidden">
           <button
             className={`px-3 py-2 font-semibold text-sm ${
-              viewMode === "static" ? "bg-orange-500/10 text-orange-500" : ""
+              viewMode === "static" ? "bg-violet-700 text-white" : ""
             }`}
             onClick={() => setViewMode("static")}
           >
@@ -44,7 +44,7 @@ export function ToolOutput({ result }: { result: ToolResult | undefined }) {
           <button
             className={`px-3 py-2 font-semibold text-sm ${
               viewMode === "interactive"
-                ? "bg-orange-500/10 text-orange-500"
+                ? "bg-violet-700 text-white"
                 : ""
             }`}
             onClick={() => setViewMode("interactive")}

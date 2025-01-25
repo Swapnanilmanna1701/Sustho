@@ -1,3 +1,4 @@
+"use client"
 import { ChartTypes, Result } from "@e2b/code-interpreter";
 import ReactECharts, { EChartsOption } from "echarts-for-react";
 

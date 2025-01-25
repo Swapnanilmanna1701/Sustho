@@ -1,12 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuSeparator,
+  
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Input } from "./ui/input";
-import { Label } from "./ui/label";
+//import { Label } from "./ui/label";
 import { Settings2 } from "lucide-react";
 import { LLMModelConfig } from "@/lib/model";
 

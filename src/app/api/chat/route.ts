@@ -1,13 +1,12 @@
-import { z } from "zod";
-import { Sandbox } from "@e2b/code-interpreter";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+//import { z } from "zod";
+//import { Sandbox } from "@e2b/code-interpreter";
 import { getModelClient, LLMModel, LLMModelConfig } from "@/lib/model";
 import { toPrompt } from "@/lib/prompt";
 import { CustomFiles } from "@/lib/types";
 import { streamText, convertToCoreMessages, Message, LanguageModelV1 } from "ai";
 
 // Allow streaming responses up to 60 seconds
-export const maxDuration = 60;
-
 export async function POST(req: Request) {
   const {
     messages,
@@ -40,36 +39,37 @@ export async function POST(req: Request) {
     model: modelClient as LanguageModelV1,
     messages: convertToCoreMessages(filteredMessages),
     ...modelParams,
-     tools: {
-     runCode: {
-       description:
-         "Execute python code in a Jupyter notebook cell and return result",
-       parameters: z.object({
-         code: z
-           .string()
-          .describe("The python code to execute in a single cell"),
-      }),
-      execute: async ({ code }) => {
+    // If the provider supports tooling, uncomment below
+    // tools: {
+    // runCode: {
+    //   description:
+    //     "Execute python code in a Jupyter notebook cell and return result",
+    //   parameters: z.object({
+    //     code: z
+    //       .string()
+    //       .describe("The python code to execute in a single cell"),
+    //   }),
+    //   execute: async ({ code }) => {
     //     // Create a sandbox, execute LLM-generated code, and return the result
-       console.log("Executing code", code);
-       const sandbox = await Sandbox.create();
+    //     console.log("Executing code", code);
+    //     const sandbox = await Sandbox.create();
 
     //     // Upload files
-        for (const file of data.files) {
-          await sandbox.files.write(file.name, atob(file.base64));
-        }
-        const { text, results, logs, error } = await sandbox.runCode(code);
-        console.log(text, results, logs, error);
+    //     for (const file of data.files) {
+    //       await sandbox.files.write(file.name, atob(file.base64));
+    //     }
+    //     const { text, results, logs, error } = await sandbox.runCode(code);
+    //     console.log(text, results, logs, error);
 
-        return {
-          text,
-          results,
-          logs,
-          error,
-        };
-      },
-     },
-     },
+    //     return {
+    //       text,
+    //       results,
+    //       logs,
+    //       error,
+    //     };
+    //   },
+    // },
+    // },
   });
 
   return result.toDataStreamResponse();

@@ -1,3 +1,4 @@
+
 import { Message } from "ai";
 import { BotIcon, UserIcon } from "lucide-react";
 import Markdown from "react-markdown";
@@ -10,7 +11,7 @@ export function MessageComponent({ message }: { message: Message }) {
   return (
     <div
       key={message.id}
-      className={`px-4 ${message.role === "user" ? "bg-orange-50" : ""}`}
+      className={`px-4 ${message.role === "user" ? "bg-violet-500 text-white text-bold" : ""}`}
     >
       <div
         className={`flex gap-4 mx-auto w-full max-w-2xl py-4 ${
@@ -19,9 +20,9 @@ export function MessageComponent({ message }: { message: Message }) {
       >
         <div className="h-fit rounded-md flex items-center justify-center">
           {message.role === "user" ? (
-            <UserIcon className="mt-1 w-6 h-6 text-orange-500" />
+            <UserIcon className="mt-1 w-6 h-6 text-white" />
           ) : (
-            <BotIcon className="mt-1 w-6 h-6 text-orange-500" />
+            <BotIcon className="mt-1 w-6 h-6 text-violet-700" />
           )}
         </div>
         <div className="overflow-hidden flex-1 flex flex-col gap-2">
