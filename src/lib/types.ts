@@ -6,6 +6,7 @@ export type ToolResult = (ToolInvocation & {
 })[];
 
 export type CustomFiles = {
+  [x: string]: string;
   name: string;
   contentType: string;
   content: string;

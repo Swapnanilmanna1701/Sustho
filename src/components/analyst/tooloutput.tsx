@@ -1,3 +1,4 @@
+"use client"
 import { Result } from "@e2b/code-interpreter";
 import { useState } from "react";
 import { ToolResult } from "@/lib/types";

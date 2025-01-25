@@ -11,7 +11,7 @@ import { LLMPicker } from "@/components/analyst/llm-picker";
 import { LLMSettings } from "@/components/analyst/llm-settings";
 import { useLocalStorage } from "usehooks-ts";
 import { preProcessFile } from "@/lib/preprocess";
-import Image from "next/image";
+//import Image from "next/image";
 const Home =()=> {
   const [files, setFiles] = useState<File[]>([]);
   const filesData = files.map(async (file) => {
@@ -26,6 +26,9 @@ const Home =()=> {
     "Person's age born in 2001 as line",
     "Analyze letters in word strawberry",
     "Plot a chart of the last 10 years of the S&P 500",
+    "Calculate the average of the first 100 numbers",
+    "Analyze P vs V graph and find the slope",
+    "Analyzing Runs of Virat Kohli since 2020",
   ];
 
   const [isLoading, setIsLoading] = useState(false);
@@ -112,27 +115,8 @@ const Home =()=> {
   }
 
   return (
-    <div className="flex flex-col min-h-screen max-h-screen">
-      <nav className="flex gap-0.5 justify-between items-center p-2 top-0 fixed left-0 right-0 bg-white/80 backdrop-blur-sm shadow-sm z-10">
-        <div className="flex items-center gap-2">
-          <Image
-          src="/thirdparty/logos/logo.png"
-          alt="Alterdomus Logo"
-          width={40}
-          height={40}
-          />
-          <h1 className="text-md font-medium">
-            Analyst by{" "}
-            <a
-              href="https://alterdomus.com"
-              target="_blank"
-              className="underline decoration-[rgba(229,123,0,.3)] decoration-2 text-[#ff8800]"
-            >
-              AD
-            </a>
-          </h1>
-        </div>
-      </nav>
+    <div className="flex flex-col bg-black min-h-screen max-h-screen">
+      
       <div className="flex-1 overflow-y-auto pt-14" id="messages">
         {messages.map((m) => (
           <MessageComponent key={m.id} message={m} />
@@ -193,7 +177,7 @@ const Home =()=> {
           </div>
           <form
             onSubmit={customSubmit}
-            className="flex border p-1 border-1.5 border-orange-400 rounded-xl overflow-hidden shadow-md"
+            className="flex border p-1 border-1.5 border-violet-500 rounded-xl overflow-hidden shadow-md"
           >
             <input
               type="file"
@@ -224,7 +208,7 @@ const Home =()=> {
             />
             <button
               type="submit"
-              className="bg-orange-500 text-white p-1.5 rounded-lg hover:bg-orange-500/80"
+              className="bg-violet-700 text-white p-1.5 rounded-lg hover:bg-white hover:text-violet-700"
             >
               <PlayIcon className="w-5 h-5" />
             </button>

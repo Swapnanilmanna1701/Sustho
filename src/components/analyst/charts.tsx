@@ -17,26 +17,26 @@ export function RenderResult({
   }
 
   // Plotly charts are not supported yet
-  // if (result.html) {
-  //   return <div dangerouslySetInnerHTML={{ __html: result.html }} />;
-  // }
+   if (result.html) {
+     return <div dangerouslySetInnerHTML={{ __html: result.html }} />;
+   }
 
   return <pre>{JSON.stringify(result, null, 2)}</pre>;
 }
 
 export function Chart({ chart }: { chart: ChartTypes }) {
   const sharedOptions: EChartsOption = {
-    // title: {
-    //   text: chart.title,
-    //   left: "center",
-    //   textStyle: {
-    //     fontSize: 14,
-    //   },
-    // },
+     title: {
+       text: chart.title,
+       left: "center",
+       textStyle: {
+         fontSize: 14,
+       },
+     },
     grid: { top: 30, right: 8, bottom: 28, left: 28 },
     legend: {
-      // left: "left",
-      // orient: "vertical",
+       left: "left",
+       orient: "vertical",
     },
   };
 
