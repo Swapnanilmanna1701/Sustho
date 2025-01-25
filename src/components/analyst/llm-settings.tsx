@@ -26,16 +26,16 @@ export function LLMSettings({
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          variant="ghost"
+          
           size="icon"
-          className="text-muted-foreground h-8 w-8 rounded-sm"
+          className="text-white h-8 w-8 rounded-sm bg-violet-500 hover:bg-white hover:text-violet-500"
         >
           <Settings2 className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start">
         <div className="flex flex-col gap-1.5 px-2 py-2">
-          <span className="text-sm font-medium">Parameters</span>
+          <span className="text-sm font-medium text-violet-700">Parameters</span>
           <div className="flex space-x-4 items-center">
             <span className="text-sm flex-1 text-muted-foreground">
               Output tokens

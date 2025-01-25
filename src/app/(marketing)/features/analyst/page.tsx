@@ -129,7 +129,7 @@ const Home =()=> {
             {files.map((file) => (
               <div
                 key={file.name}
-                className="flex items-center gap-2 p-1.5 border rounded-lg bg-slate-100 text-gray-800"
+                className="flex items-center gap-2 p-1.5 border rounded-lg bg-slate-100 text-white"
               >
                 <FileText className="w-4 h-4" />
                 <span className="text-sm truncate">{file.name}</span>
@@ -149,7 +149,7 @@ const Home =()=> {
               {exampleMessages.map((msg) => (
                 <button
                   key={msg}
-                  className="flex items-center gap-2 p-1.5 border rounded-lg text-gray-800"
+                  className="flex items-center gap-2 p-1.5 border rounded-lg text-white"
                   onClick={() => setInput(msg)}
                 >
                   <span className="text-sm truncate">{msg}</span>
@@ -172,7 +172,7 @@ const Home =()=> {
               />
             </div>
             {isLoading && (
-              <span className="text-xs text-gray-700">Loading…</span>
+              <span className="text-xs text-violet-500">Loading…</span>
             )}
           </div>
           <form
@@ -190,7 +190,7 @@ const Home =()=> {
             />
             <button
               type="button"
-              className="border p-1.5 rounded-lg hover:bg-slate-200 text-slate-800"
+              className="border border-violet-500 p-1.5 rounded-lg hover:bg-violet-500 text-violet-500 hover:text-white"
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById("multimodal")?.click();
@@ -201,7 +201,7 @@ const Home =()=> {
             <input
               autoFocus
               required
-              className="w-full px-2 outline-none"
+              className="w-full px-2 outline-none "
               value={input}
               placeholder="Enter your prompt..."
               onChange={handleInputChange}
