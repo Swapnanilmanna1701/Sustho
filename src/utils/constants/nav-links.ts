@@ -17,12 +17,7 @@ export const NAV_LINKS = [
                 href: "/features/password-protection",
                 icon: LockIcon,
             },
-            {
-                title: "Advanced Analytics",
-                tagline: "Gain insights into who is clicking your links.",
-                href: "/features/analytics",
-                icon: LineChartIcon,
-            },
+            
             {
                 title: "Custom QR Codes",
                 tagline: "Use QR codes to reach your audience.",
@@ -88,7 +83,7 @@ export const NAV_LINKS = [
             {
                 title: "Screenshot",
                 tagline: "Use QR codes to reach your audience.",
-                href: "/features/screenshot",
+                href: "/features/quizz",
                 icon: QrCodeIcon,
             }
             ,
@@ -110,6 +105,13 @@ export const NAV_LINKS = [
                 title: "Question",
                 tagline: "Use QR codes to reach your audience.",
                 href: "/features/question",
+                icon: QrCodeIcon,
+            }
+            ,
+            {
+                title: "AI Quiz",
+                tagline: "Use QR codes to reach your audience.",
+                href: "/features/aiquiz",
                 icon: QrCodeIcon,
             }
         ],

@@ -1,3 +1,4 @@
+//import Link from 'next/link';
 
 import { ChevronRight } from 'lucide-react'
 //import Navbar from '../components/Navbar'
@@ -15,9 +16,9 @@ const Landing = () => {
                     <p className="text-xl md:text-xl mb-8">
                         Learn, Code, and Create with <span className=' font-robotoslab'>Samarthan</span>
                     </p>
-                    <a className="btn btn-primary btn-lg px-8 rounded-full" href='/login'>
+                    <button className="btn btn-primary btn-lg px-8 rounded-full" href='/login'>
                         Get Started <ChevronRight className="ml-2" />
-                    </a>
+                    </button>
 
                 </section>
 
@@ -45,7 +46,7 @@ const Landing = () => {
                             <h2 className="card-title">AI Generated Quizzes</h2>
                             <p>Get AI Generated Quizzes on any topic of choice!</p>
                             <div className="card-actions justify-end">
-                                <a className="btn" href="/quiz/linux">Check out!</a>
+                                <link  href="/quiz">Check out!</link>
                             </div>
                         </div>
                     </div>

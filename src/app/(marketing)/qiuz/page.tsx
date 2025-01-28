@@ -1,15 +1,16 @@
+
 "use client"
 import axios from "axios";
 import { ArrowRight, CheckCircle, Search, XCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { setIncrementStar, setUserTags, useAppDispatch } from "./redux";
+import { setIncrementStar, setUserTags, useAppDispatch } from "@/pages/redux";
 
 const apiUrl = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
 
 const Quiz = () => {
   const { id } = useParams();
-  const location = useLocation();
+  //const location = useLocation();
   const [topic, setTopic] = useState<any>(
     new URLSearchParams(location.search).get("topic")
   );
@@ -73,8 +74,8 @@ const Quiz = () => {
   const [isCorrect, setIsCorrect] = useState(null);
   const [loading, setLoading] = useState(false);
   const [score, setScore] = useState(0);
-  const dispatch = useAppDispatch()
-  const navigate = useNavigate();
+ //const dispatch = useAppDispatch()
+  //const navigate = useNavigate();
   const fetchQuiz = async (topic: any) => {
     setLoading(true);
     try {
