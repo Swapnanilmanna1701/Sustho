@@ -26,7 +26,7 @@ export default function Hero() {
         <div className=" mb-10 lg:mb-0">
           <h1 className="text-4xl max-w-2xl sm:text-5xl lg:text-6xl font-bold text-transparent mb-4 tracking-tight bg-gradient-to-br from-foreground to-muted-foreground/70 bg-clip-text">
             Share Your Screen, <span><GradientText
-                          colors={["#8409ff", "#3c00e9", "#a004ff", "#4079ff", "#eee4ff"]}
+                          colors={["#ff13b6", "#3c00e9", "#8c2aff", "#4079ff", "#eee4ff"]}
                           animationSpeed={3}
                           showBorder={false}
                           className="custom-class text-bold text-7xl"

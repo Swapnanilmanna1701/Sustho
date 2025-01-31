@@ -34,20 +34,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
           
-          <footer className="w-full max-w-7xl px-4 mx-auto">
-            <p className="text-sm text-muted-foreground">
-              &copy; 2024 XcreenShare. Made by{" "}
-              <a
-                href=""
-                target="_blank"
-                className="text-primary"
-                rel="noopener noreferrer"
-              >
-                Swapnanil{" "}
-              </a>
-              ❤️
-            </p>
-          </footer>
+          
           <ThemedToaster />
         </ThemeProvider>
       </body>

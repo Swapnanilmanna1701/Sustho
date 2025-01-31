@@ -142,7 +142,7 @@ export default function Component() {
     setLoading(true);
     try {
       const output = await fetch(
-        `https://translator.subha9-5roy350-40b.workers.dev/?t=${inputText}&s=${inputLanguage}&l=${outputLanguage}`
+        `https://localhost:3000/?t=${inputText}&s=${inputLanguage}&l=${outputLanguage}`
       );
       const data = await output.json();
       setOutputText(data.translated_text);
