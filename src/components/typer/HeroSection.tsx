@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+//import CardItem from "@/components/typer/card"
 import ButtonGenerate from "@/components/typer/button"
 import {
   
@@ -13,9 +14,10 @@ import {
   Coffee,
 
 } from "lucide-react";
-import { Button } from "../ui/button";
+//import { Button } from "../ui/button";
+//import CardItem from "@/components/typer/card"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { AnimatedTooltipPreview } from "./AnimatedTooltip";
+import LiveButton from "@/components/typer/livebutton"
 import { motion } from "framer-motion";
 import { Spotlight } from "../typer/ui/Spotlight";
 import GradientText from "@/components/typer/ui/gradient-text";
@@ -230,7 +232,7 @@ export default function TypeArenaLanding() {
             transition={{ delay: 2, duration: 0.8 }}
             className="text-3xl font-bold text-gray-900 dark:text-white mb-6"
           >
-            Why Choose TypeArena?
+            Why Choose MatrX AI?
           </motion.h3>
           <motion.div
             variants={stagger}
@@ -280,87 +282,9 @@ export default function TypeArenaLanding() {
           </motion.div>
         </motion.section>
 
-        <motion.section
-          variants={fadeInUp}
-          transition={{ delay: 3, duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <motion.h3
-            variants={fadeInUp}
-            transition={{ delay: 3.2, duration: 0.8 }}
-            className="text-3xl font-bold text-gray-900 dark:text-white mb-6"
-          >
-            Join Thousands of Happy Typists
-          </motion.h3>
-          <motion.div
-            variants={fadeInUp}
-            transition={{ delay: 3.4, duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            <AnimatedTooltipPreview />
-          </motion.div>
-          <motion.p
-            variants={fadeInUp}
-            transition={{ delay: 3.6, duration: 0.8 }}
-            className="text-gray-600 dark:text-gray-300 text-xl mb-8"
-          >
-            &quot;TypeArena has transformed my typing speed and accuracy.
-            I&apos;ve never had so much fun improving my skills!&quot;
-          </motion.p>
-          <motion.div
-            variants={fadeInUp}
-            transition={{ delay: 3.8, duration: 0.8 }}
-          >
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-gray-300 text-gray-600 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
-            >
-              Read Success Stories
-            </Button>
-          </motion.div>
-        </motion.section>
+        
 
-        <motion.section
-          variants={fadeInUp}
-          transition={{ delay: 4, duration: 0.8 }}
-          className="rounded-lg p-8 text-center"
-        >
-          <motion.h3
-            variants={fadeInUp}
-            transition={{ delay: 4.2, duration: 0.8 }}
-            className="text-3xl font-bold text-gray-900 dark:text-gray-300 mb-6"
-          >
-            Ready to Become a Typing Master?
-          </motion.h3>
-          <motion.p
-            variants={fadeInUp}
-            transition={{ delay: 4.4, duration: 0.8 }}
-            className="text-xl text-gray-600 dark:text-gray-300 mb-8"
-          >
-            Join our community of fast and accurate typists today. It&apos;s
-            free to start!
-          </motion.p>
-          <motion.div
-            variants={fadeInUp}
-            transition={{ delay: 4.6, duration: 0.8 }}
-            className="flex justify-center gap-4"
-          >
-            <Button
-              size="lg"
-              className="bg-gray-900 text-white hover:bg-gray-800"
-            >
-              <Link href="/signup">Sign Up Now</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-gray-300 text-gray-600 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
-            >
-              <Link href="/about">Learn More</Link>
-            </Button>
-          </motion.div>
-        </motion.section>
+        
       </motion.main>
     </motion.div>
   );
