@@ -105,6 +105,7 @@
     "rgb2hex": "^0.2.5",
     "socket.io-client": "^4.8.1",
     "sonner": "^1.7.1",
+    "styled-components": "^6.1.15",
     "tailwind-merge": "^2.6.0",
     "tailwind-scrollbar-hide": "^2.0.0",
     "tailwindcss-animate": "^1.0.7",

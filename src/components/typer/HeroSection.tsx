@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import TextRevealButton from "@/components/typer/ui/startbutton"
+import ButtonGenerate from "@/components/typer/button"
 import {
   
   Timer,
@@ -19,7 +19,7 @@ import { AnimatedTooltipPreview } from "./AnimatedTooltip";
 import { motion } from "framer-motion";
 import { Spotlight } from "../typer/ui/Spotlight";
 import GradientText from "@/components/typer/ui/gradient-text";
-import {RainbowButton} from "@/components/typer/ui/ecobutton"
+import ButtonBanner from "@/components/typer/ui/ecobutton"
 const fadeInUp = {
   initial: { opacity: 0, y: 50 },
   animate: { opacity: 1, y: 0 },
@@ -132,7 +132,7 @@ export default function TypeArenaLanding() {
           variants={fadeInUp}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <RainbowButton>Introducing MatrX AI For typing</RainbowButton>
+          <ButtonBanner />
           <motion.h1
             variants={fadeInUp}
             transition={{ delay: 0.4, duration: 0.8 }}
@@ -144,7 +144,7 @@ export default function TypeArenaLanding() {
               showBorder={false}
               className="custom-class text-bold text-7xl"
             >
-              MatrX AI
+              SpeedX
             </GradientText></span>
             
           </motion.h1>
@@ -164,7 +164,7 @@ export default function TypeArenaLanding() {
               href="/playground"
               className=" text-white px-8 py-3 rounded-full  transition-colors inline-flex items-center text-lg font-medium"
             >
-              <TextRevealButton />
+              <ButtonGenerate />
             </Link>
           </motion.div>
         </motion.div>
