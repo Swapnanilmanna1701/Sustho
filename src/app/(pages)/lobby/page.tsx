@@ -2,6 +2,10 @@
 'use client';
 
 import { useState, useEffect, ChangeEvent } from 'react';
+//import styled from 'styled-components';
+
+import JoinButton from "@/components/typer/joinbutton"
+import RoomButton from "@/components/typer/roombutton"
 import io, { Socket } from 'socket.io-client';
 import { Button } from "@/components/typer/ui/button";
 import { Input } from "@/components/typer/ui/input";
@@ -157,7 +161,7 @@ export default function TypingTest() {
   };
 
   return (
-    <div className="container mx-auto p-4 min-h-screen">
+    <div className="container bg-black w-full p-4 min-h-screen">
       <h1 className="text-3xl font-bold mb-6 text-center">Typing Test Room</h1>
       <div className="flex flex-col gap-10">
         <div className='flex flex-col md:flex-row justify-between gap-2'>
@@ -166,8 +170,8 @@ export default function TypingTest() {
               <CardTitle>Room Controls</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-4">
-                <Button onClick={createRoom} className=" text-white text-xl hover:bg-gray-900 bg-gray-700">Create Room</Button>
+              <div className="space-y-4 ">
+                <Button onClick={createRoom} className='bg- hover:bg-'><RoomButton /></Button>
                 {roomId && (
                   <div className="p-2 bg-muted rounded-md">
                     <p className="text-sm">Share this room ID with others:</p>
@@ -181,6 +185,7 @@ export default function TypingTest() {
                     onChange={(e) => setRoomId(e.target.value)}
                   />}
                   <Button className='text-xl' variant="outline" onClick={() => joinRoom(roomId)}>{isJoining ? "Joining" : "Join"}</Button>
+                  
                 </div>
               </div>
             </CardContent>
@@ -202,7 +207,7 @@ export default function TypingTest() {
                 </div>
               )}
               {Object.entries(players).map(([playerId, player]) => (
-                <div key={playerId} className="flex justify-between items-center p-3 bg-gray-50 dark:bg-black rounded-lg">
+                <div key={playerId} className="flex justify-between text-white items-center p-3 bg-gradient-to-r from-blue-700 to-cyan-300 dark:bg-black rounded-lg">
                   <span className="font-medium text-sm">{playerId.slice(0, 6).toLowerCase()}</span>
                   <span className="text-sm">{player.wpm}</span>
                 </div>
@@ -235,13 +240,13 @@ export default function TypingTest() {
                     <span>{accuracy.toFixed(2)}%</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Trophy className="w-6 h-6" />
+                    <Trophy className="w-6 h-6 text-blue-600" />
                     <span>{wpm} WPM</span>
                   </div>
                 </div>
                 <Progress
                   value={(typedText.length / text.length) * 100}
-                  className="w-full h-4 rounded-full"
+                  className="w-full h-4 rounded-full bg-gradient-to-r from-blue-600 to-cyan-300"
                 />
                 <div className="relative min-h-[500px] w-full rounded-lg  bg-background p-4 font-mono text-xl md:text-3xl">
                   {/* Background sample text with red highlight for incorrect input */}
@@ -283,9 +288,9 @@ export default function TypingTest() {
             {!isTestRunning && Object.keys(players).length > 0 && !resultsDisplayed && isAdmin && (
               <Button
                 onClick={startTest}
-                className=" text-white text-lg py-3 bg-gray-700 hover:bg-gray-900"
+                className=" text-white text-lg py-3 bg- hover:bg-"
               >
-                Start Typing Test
+                <JoinButton />
               </Button>
             )}
             {resultsDisplayed && (

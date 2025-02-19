@@ -1,29 +1,13 @@
-import { HelpCircleIcon, LineChartIcon, Link2Icon, LockIcon, NewspaperIcon, QrCodeIcon } from "lucide-react";
+import { HelpCircleIcon, NewspaperIcon, QrCodeIcon } from "lucide-react";
 
 export const NAV_LINKS = [
     {
         title: "Features",
         href: "/features",
         menu: [
-            {
-                title: "Link Shortening",
-                tagline: "Shorten links and track their performance.",
-                href: "/features/link-shortening",
-                icon: Link2Icon,
-            },
-            {
-                title: "Password Protection",
-                tagline: "Secure your links with a password.",
-                href: "/features/password-protection",
-                icon: LockIcon,
-            },
             
-            {
-                title: "Custom QR Codes",
-                tagline: "Use QR codes to reach your audience.",
-                href: "/features/qr-codes",
-                icon: QrCodeIcon,
-            },
+            
+            
             {
                 title: "AI Translator",
                 tagline: "Use QR codes to reach your audience.",

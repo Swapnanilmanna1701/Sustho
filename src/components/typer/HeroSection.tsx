@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import GameButton from "@/components/typer/gamebutton"
 //import CardItem from "@/components/typer/card"
 import ButtonGenerate from "@/components/typer/button"
 import {
@@ -17,7 +18,7 @@ import {
 //import { Button } from "../ui/button";
 //import CardItem from "@/components/typer/card"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import LiveButton from "@/components/typer/livebutton"
+//import LiveButton from "@/components/typer/livebutton"
 import { motion } from "framer-motion";
 import { Spotlight } from "../typer/ui/Spotlight";
 import GradientText from "@/components/typer/ui/gradient-text";
@@ -164,9 +165,17 @@ export default function TypeArenaLanding() {
           >
             <Link
               href="/playground"
-              className=" text-white px-8 py-3 rounded-full  transition-colors inline-flex items-center text-lg font-medium"
+              className=" text-white px-8 py-3 gap-10 rounded-full  transition-colors inline-flex items-center text-lg font-medium"
             >
               <ButtonGenerate />
+              
+            </Link>
+            <Link
+              href="/lobby"
+              className=" text-white px-8 py-3 gap-10 rounded-full  transition-colors inline-flex items-center text-lg font-medium"
+            >
+              <GameButton />
+              
             </Link>
           </motion.div>
         </motion.div>

@@ -78,7 +78,7 @@ export default function Tabnavbar() {
               className="pl-8"
             />
           </form>
-          <Button>Sign In</Button>
+          
         </div>
       </div>
     </nav>

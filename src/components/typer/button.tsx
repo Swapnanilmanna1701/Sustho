@@ -14,8 +14,8 @@ const ButtonGenerate = () => {
 const StyledWrapper = styled.div`
   .button {
     position: relative;
-    width: 120px;
-    height: 40px;
+    width: 125px;
+    height: 48px;
     background-color: #000;
     display: flex;
     align-items: center;
@@ -36,8 +36,8 @@ const StyledWrapper = styled.div`
     left: -4px;
     top: -1px;
     margin: auto;
-    width: 128px;
-    height: 48px;
+    width: 132px;
+    height: 56px;
     border-radius: 10px;
     background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
     z-index: -10;

@@ -1,6 +1,6 @@
 "use client";
 
-import { buttonVariants } from "@/components/ui/button";
+//import { buttonVariants } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -17,13 +17,13 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import MaxWidthWrapper from "../global/max-width-wrapper";
 //import { ModeToggle } from "@/components/theme-toggle";
-import EcoModeButton from "@/components/EcoButton";
+//import EcoModeButton from "@/components/EcoButton";
 import gradientStyle from "@/styles/gradient.module.css";
 
 
 import MobileNavbar from "./mobile-navbar";
 import AnimationContainer from "../global/animation-container";
-import GradientFillButton from "@/components/fillbutton";
+//import GradientFillButton from "@/components/fillbutton";
 
 const Navbar = () => {
   const { user } = useClerk();
@@ -133,27 +133,7 @@ const Navbar = () => {
             </NavigationMenu>
           </div>
 
-          <div className="hidden lg:flex items-center">
-            {user ? (
-              <div className="flex items-center">
-                <Link
-                  href="/dashboard"
-                  className={buttonVariants({ size: "sm" })}
-                >
-                  Dashboard
-                </Link>
-              </div>
-            ) : (
-              <div className="flex items-center gap-x-4">
-                <Link href="/auth/sign-in">
-                  <GradientFillButton />
-                </Link>
-                <Link href="/auth/sign-up">
-                  <EcoModeButton />
-                </Link>
-              </div>
-            )}
-          </div>
+          
 
           <MobileNavbar />
         </MaxWidthWrapper>
